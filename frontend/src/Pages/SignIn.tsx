@@ -45,6 +45,13 @@ const SignIn: React.FC = () => {
               Password
             </label>
           </div>
+
+          <button
+            type="submit"
+            className="mt-4 w-28 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 mx-auto"
+          >
+            Sign In
+          </button>
         </div>
       </form>
     </div>
