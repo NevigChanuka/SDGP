@@ -43,7 +43,10 @@ const SignUp: React.FC = () => {
                     className="mt-4 rounded-sm h-8 w-72 border border-gray-300 px-2"
                 />
 
-        
+                <button type="submit" className="mt-4 px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">
+                    Create
+                </button>
+
             </div>
 
         </form>
