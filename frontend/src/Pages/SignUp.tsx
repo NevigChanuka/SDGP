@@ -7,6 +7,47 @@ const SignUp: React.FC = () => {
         <Logo/>
       <h2 className="text-center text-lg font-medium mt-2">Create an account</h2>
 
+      <form className="flex flex-col items-center w-full">
+            <div className="flex flex-col items-center w-full">
+
+            
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    autoComplete="off"
+                    className="mt-4 rounded-sm h-8 w-72 border border-gray-300 px-2"
+                />
+
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Email"
+                    autoComplete="off"
+                    className="mt-4 rounded-sm h-8 w-72 border border-gray-300 px-2"
+                />
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    autoComplete="off"
+                    className="mt-4 rounded-sm h-8 w-72 border border-gray-300 px-2"
+                />
+
+                <input
+                    type="password"
+                    id="Confirm password"
+                    placeholder="Confirm password"
+                    autoComplete="off"
+                    className="mt-4 rounded-sm h-8 w-72 border border-gray-300 px-2"
+                />
+
+        
+            </div>
+
+        </form>
+
       
     </div>
   );
