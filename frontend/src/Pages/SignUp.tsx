@@ -46,7 +46,7 @@ const SignUp: React.FC = () => {
                     className="mt-4 rounded border border-gray-300 h-8 px-3 w-full"
                 />
 
-                <button type="submit" className="mt-4 px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 cursor-pointer">
+                <button type="submit" className="mt-3 px-5 py-2 bg-green-400 text-white rounded-md hover:bg-green-500 cursor-pointer">
                     Create
                 </button>
 
@@ -55,12 +55,12 @@ const SignUp: React.FC = () => {
         </form>
 
         <div className="flex items-center justify-center w-full">
-            <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4"/>
-            <span className="mx-2 text-sm font-bold sm:text-base">OR</span>
-            <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4"/>
+            <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-3"/>
+            <span className="mx-2 text-sm font-semibold sm:text-base">OR</span>
+            <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-3"/>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center justify-center w-full mt-3">
             <button className="flex items-center justify-center w-4/5 h-8 px-4 my-1 text-sm font-bold text-black bg-white border border-black rounded-lg cursor-pointer">
                 <img src={GoogleIcon} alt="Google" className="w-4 h-4 mr-5"/>
                 Continue with Google
@@ -74,6 +74,11 @@ const SignUp: React.FC = () => {
                 Continue with Apple
             </button>
         </div>
+
+        <p className="mt-2 text-xs sm:text-sm text-center">
+            Already have an account? 
+            <a href="#" className="text-purple-700 hover:underline"> Sign in</a>
+        </p>
 
       
     </div>
