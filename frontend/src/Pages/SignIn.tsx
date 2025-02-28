@@ -1,8 +1,8 @@
 import React from "react";
 import { Logo } from "../components/Logo";
-
-
-
+import GoogleIcon from "../assets/Google.png";
+import FacebookIcon from "../assets/Facebook.png";
+import AppleIcon from "../assets/Apple.png";
 
 
 const SignIn: React.FC = () => {
@@ -54,6 +54,15 @@ const SignIn: React.FC = () => {
           >
             Sign In
           </button>
+        
+
+          <div className="flex items-center justify-center w-full">
+            <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4" />
+            <span className="mx-2 text-sm font-bold sm:text-base">OR</span>
+            <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4" />
+        </div>
+
+       
 
 
 
