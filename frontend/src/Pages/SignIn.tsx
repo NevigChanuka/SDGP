@@ -1,7 +1,11 @@
-
-
 import React from "react";
 import { Logo } from "../components/Logo";
+import GoogleIcon from "../assets/Google.png";
+import FacebookIcon from "../assets/Facebook.png";
+import AppleIcon from "../assets/Apple.png";
+
+
+
 
 const SignIn: React.FC = () => {
   return (
@@ -58,6 +62,22 @@ const SignIn: React.FC = () => {
             <span className="mx-2 text-sm font-bold sm:text-base">OR</span>
             <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4" />
         </div>
+
+        <div className="flex flex-col items-center justify-center w-full mt-3">
+            <button className="flex items-center justify-center w-4/5 h-8 px-4 my-1 text-sm font-bold text-black bg-white border border-black rounded-lg cursor-pointer">
+                <img src={GoogleIcon} alt="Google" className="w-4 h-4 mr-5"/>
+                Continue with Google
+            </button>
+            <button className="flex items-center justify-center w-4/5 h-8 px-4 my-1 text-sm font-bold text-black bg-white border border-black rounded-lg cursor-pointer">
+                <img src={FacebookIcon} alt="Facebook" className="w-5 h-5 mr-2.5"/>
+                Continue with Facebook
+            </button>
+            <button className="flex items-center justify-center w-4/5 h-8 px-4 my-1 text-sm font-bold text-black bg-white border border-black rounded-lg cursor-pointer">
+                <img src={AppleIcon} alt="Apple" className="w-3.5 h-3.5 mr-7"/>
+                Continue with Apple
+            </button>
+        </div>
+
         </div>
       </form>
     </div>
