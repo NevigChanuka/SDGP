@@ -1,13 +1,14 @@
 import React from 'react';
-import SignUp from './SignUp';
+import SignIn from './SignIn';
 
-const Grammar_checker_pages:React.FC = () => {
+const Home:React.FC = () => {
 
   return (
   
-      <SignUp/>
-    
+      <SignIn/>
+
+      
   )
 }
 
-export default Grammar_checker_pages;
+export default Home;
