@@ -1,8 +1,9 @@
 import React from 'react';
 import Facebook from "../assets/facebook_logo.png";
 import Instagram from "../assets/insta_logo.png";
-import Twitter from "../assets/linkedin_logo.png";
+import LinkedIn from "../assets/linkedin_logo.png";
 import Logo from "../assets/logo-removebg.png";
+
 
 
 interface FooterLink {
@@ -30,9 +31,9 @@ const FooterServices: FooterLink[] = [
     ];
 
 const FooterSocials: FooterSocial[] = [
-    { name: "Facebook", link: "#", icon: Facebook },
-    { name: "Instagram", link: "#", icon: Instagram },
-    { name: "Twitter", link: "#", icon: Twitter },
+    { name: "Facebook", link: "https://www.facebook.com/profile.php?id=61573618317072", icon: Facebook },
+    { name: "Instagram", link: "https://www.instagram.com/vyakarana.site/", icon: Instagram },
+    { name: "LinkedIn", link: "https://www.linkedin.com/company/105934369/admin/dashboard/", icon: LinkedIn },
     ];
 
 
