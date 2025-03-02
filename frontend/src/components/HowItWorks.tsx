@@ -2,6 +2,9 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Pic1 from "../assets/Grammar_robot_(1).png";
+import Pic2 from "../assets/Grammar_robot_(2).png";
+import Pic3 from "../assets/Grammar_robot_(3).png";
 
 
 interface Method {
@@ -16,19 +19,19 @@ const methods: Method[] = [
         id: 1,
         title: "Enter your text",
         description: "Type or paste your Sinhala text into the input box.",
-        img: "",
+        img: Pic1,
     },
     {
         id: 2,
         title: "Tool checks your writing",
-        description: "Our tool analyzes grammatical errors and suggests a correct version",
-        img: "",
+        description: "Our tool analyzes grammatical errors and suggests a correct version.",
+        img:Pic2,
     },
     {
         id: 3,
         title: "Get similar word suggestions",
-        description: "For highlighted words, we provide alternative word choices to refine your writing",
-        img: "",
+        description: "For highlighted words, we provide alternative word choices to refine your writing.",
+        img:Pic3,
     },
     
 ]
@@ -57,16 +60,17 @@ const HowItWorks:React.FC = () => {
         <Slider {...settings}>
           {methods.map(({ id, title, description, img }) => (
             <div key={id} className="my-6">
-              <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl">
-                <img
-                  src={img}
-                  alt=""
-                  className="block mx-auto h-[300px] w-full sm:w-[200px] object-cover"
-                />
+              <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-5 md:gap-14 p-4 mx-auto max-w-screen-lg w-full">
+            
+                    <img
+                    src={img}
+                    alt=""
+                    className="h-auto max-h-[300px] w-auto max-w-full sm:max-w-[520px] object-cover"
+                    />
               </div>
-              <div>
-                <h1 className="text-xl font-bold">{title}</h1>
-                <p className="text-black xl:pr-40">{description}</p>
+              <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+                <h1 className="text-xl font-bold py-1">{title}</h1>
+                <p className="text-black max-w-2xl">{description}</p>
               </div>
             </div>
           ))}
