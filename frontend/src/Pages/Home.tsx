@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
+import HowItWorks from '../components/HowItWorks';
 
 const Home:React.FC = () => {
 
@@ -8,7 +9,7 @@ const Home:React.FC = () => {
   
 
       <>
-      
+      <HowItWorks />
       <FAQ />
       <Footer />
       </>
