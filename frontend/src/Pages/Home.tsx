@@ -1,13 +1,16 @@
 import React from 'react';
 import SignIn from './SignIn';
 import Footer from '../components/Footer';
+import HowItWorks from '../components/HowItWorks';
 
 const Home:React.FC = () => {
 
   return (
   
-      
-      <Footer/>
+      <div>
+        <HowItWorks/>
+        <Footer/>
+      </div>
 
       
   )

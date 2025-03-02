@@ -1,6 +1,7 @@
 import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 
 interface Method {
@@ -33,9 +34,46 @@ const methods: Method[] = [
 ]
 
 
-const HowItWorks = () => {
+const HowItWorks:React.FC = () => {
+
+    const settings ={
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        cssEase: "linear",
+        pauseOnHover: true,
+        pauseOnFocus: true,  
+    };
+
   return (
-    <div>HowItWorks</div>
+    <div className="py-10">
+    <div className="container">
+      <div className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6">
+        <Slider {...settings}>
+          {methods.map(({ id, title, description, img }) => (
+            <div key={id} className="my-6">
+              <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl">
+                <img
+                  src={img}
+                  alt=""
+                  className="block mx-auto h-[300px] w-full sm:w-[200px] object-cover"
+                />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold">{title}</h1>
+                <p className="text-black xl:pr-40">{description}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
+  </div>
   )
 }
 
