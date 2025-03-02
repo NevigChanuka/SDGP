@@ -1,13 +1,18 @@
 import React from 'react';
-import SignIn from './SignIn';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
+import HowItWorks from '../components/HowItWorks';
 
 const Home:React.FC = () => {
 
   return (
   
-      <><FAQ /><Footer /></>
+
+      <>
+      <HowItWorks />
+      <FAQ />
+      <Footer />
+      </>
 
       
   )
