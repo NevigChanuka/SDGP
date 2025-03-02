@@ -1,11 +1,13 @@
 import React from 'react';
-import SignIn from './SignIn';
+
+import NavBar from '../components/NavBar';
+
 
 const Home:React.FC = () => {
 
   return (
   
-      <SignIn/>
+      <NavBar/>
 
       
   )
