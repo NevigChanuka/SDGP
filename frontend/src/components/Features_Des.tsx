@@ -8,11 +8,11 @@ interface FeatureProps {
 
 const Features_des: React.FC<FeatureProps> = ({ image, title, description }) => {
   return (
-    <div className="overflow-hidden rounded-lg shadow-lg ">
+    <div className="overflow-hidden rounded-lg shadow-lg h-145 w-120 ">
       <img
         src={image}
         alt="Feature image"
-        className="h-[300px] group-hover:scale-105 duration-300"
+        className="h-[400px] group-hover:scale-105 duration-300"
       />
       <div className="space-y-2 p-4 bg-white">
         <h1 className="text-2xl font-semibold">{title}</h1>

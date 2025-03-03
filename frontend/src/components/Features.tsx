@@ -1,5 +1,7 @@
 import React from "react";
 import Features_des from "./Features_Des";
+import image1 from "../assets/grammar_check.png"
+import image2 from "../assets/similar_words.png";
 
 interface Feature {
   id: number;
@@ -11,17 +13,17 @@ interface Feature {
 const features: Feature[] = [
   {
     id: 1,
-    image: "#",
+    image: image1,
     title: "Correcting Grammatical errors",
     description:
       "Automatically detects and corrects grammatical mistakes in Sinhala text. Highlights errors and provides suggestions for improvement.",
   },
   {
     id: 2,
-    image:"#",
+    image:image2,
     title: "Suggest similar words",
     description:
-      "Provides alternative words with similar meanings to enhance vocabulary. Helps users refine their writing by suggesting more suitable words. Useful for writers, students, and professionals looking to improve their content.",
+      "Provides alternative words with similar meanings to enhance vocabulary. Helps users refine their writing by suggesting more suitable words.",
   },
 ];
 
@@ -33,7 +35,7 @@ const Features: React.FC = () => {
           Features
         </h1>
         {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 ">
           {features.map((feature) => (
             <Features_des key={feature.id} {...feature} />
           ))}
