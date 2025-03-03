@@ -30,12 +30,12 @@ const features: Feature[] = [
 const Features: React.FC = () => {
   return (
     <div className="bg-gray-100 py-10 pb-14 flex justify-center">
-      <div className="container ">
-        <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-semibold">
+      <div className="container max-w-screen-xl mx-auto px-4">
+        <h1 className="mb-8 border-l-8 border-green-500 py-2 pl-4 text-3xl font-semibold">
           Features
         </h1>
         {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
           {features.map((feature) => (
             <Features_des key={feature.id} {...feature} />
           ))}
