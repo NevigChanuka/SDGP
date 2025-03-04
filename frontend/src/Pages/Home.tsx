@@ -10,6 +10,8 @@ const Home:React.FC = () => {
       <NavBar/>
 
       
+
+      
   )
 }
 
