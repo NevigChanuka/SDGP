@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import ProfileDropdown from "./ProfileDropdown"; // Importing the dropdown menu
 
 interface MenuLink {
   id: number;
@@ -41,7 +42,8 @@ const NavBar: React.FC = () => {
           </ul>
         </div>
 
-       
+        {/* Profile Dropdown (Right Side) */}
+        <ProfileDropdown />
       </div>
     </nav>
   );
