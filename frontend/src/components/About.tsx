@@ -1,5 +1,5 @@
 import React from "react";
-
+import video1 from "../assets/video1.mp4";
 
 const About: React.FC = () => {
   return (
@@ -23,10 +23,18 @@ const About: React.FC = () => {
             writing effortlessly.
           </p>
         </div>
-        
+        <video
+          className="w-56 rounded-lg shadow-md"
+          src={video1}
+          autoPlay
+          loop
+          muted
+          controls
+        />
       </section>
     </div>
   );
 };
 
 export default About;
+
