@@ -12,6 +12,7 @@ const schema = yup.object().shape(
     {
         name: yup.string().required("Name is required"),
         email: yup.string().email("Invalid email format").required("Email is required"),
+        password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
     }
 );
 
@@ -65,13 +66,18 @@ const SignUp: React.FC = () => {
                 <p className="text-red-500 text-xs">{errors.email?.message}</p>
 
 
+                {/* if there is an error in the password field, border color will be red, otherwise it will be gray */}
                 <input
                     type="password"
+                    {...register("password")}
                     id="password"
                     placeholder="Password"
                     autoComplete="off"
-                    className="mt-4 rounded border border-gray-300 h-8 px-3 w-full"
+                    className={`mt-4 rounded border h-8 px-3 w-full ${errors.email ? "border-red-500" : "border-gray-300"}`}
+                    
                 />
+                {/*if there is an error in the password field, display the error message*/}
+                <p className="text-red-500 text-xs">{errors.password?.message}</p>
 
                 <input
                     type="password"
@@ -112,7 +118,7 @@ const SignUp: React.FC = () => {
 
         <p className="mt-2 text-xs sm:text-sm text-center">
             Already have an account? 
-            <a href="#" className="text-purple-700 hover:underline"> Sign in</a>
+            <a href="#" className="text-green-600 hover:underline"> Sign in</a>
         </p>
 
       
