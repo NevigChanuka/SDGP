@@ -1,26 +1,46 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import {Logo}  from "../components/Logo";
 import GoogleIcon from "../assets/Google.png";
 import FacebookIcon from "../assets/Facebook.png";
 import AppleIcon from "../assets/Apple.png";
 
+const schema = yup.object().shape(
+    {
+        name: yup.string().required("Name is required"),
+    }
+);
+
 const SignUp: React.FC = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    });
+
+    const onSubmit = (data: any) => {
+        console.log("Form data", data);
+    };
   return (
     <div className="w-[30%] h-[640px] mx-auto mt-12 bg-white p-10 rounded-2xl shadow-2xl border border-green-900">
         <Logo/>
       <h2 className="text-center text-lg font-medium mt-2">Create an account</h2>
 
-      <form className="flex flex-col items-center w-full p-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center w-full p-4">
             <div className="flex flex-col items-center w-full max-w-sm">
 
             
                 <input
                     type="text"
+                    {...register("name")}
                     id="name"
                     placeholder="Name"
                     autoComplete="off"
-                    className="mt-4 rounded border border-gray-300 h-8 px-3 w-full"
+                    className={`mt-4 rounded border h-8 px-3 w-full ${errors.name ? "border-red-600" : "border-gray-300"}`}
+
                 />
+                <p className="text-red-600 text-xs">{errors.name?.message}</p>
 
                 <input
                     type="text"
