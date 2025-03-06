@@ -1,24 +1,28 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { useForm } from "react-hook-form"; {/*importing useForm from react-hook-form for validation*/}
+import { yupResolver } from "@hookform/resolvers/yup"; {/*importing yupResolver from @hookform/resolvers/yup for validation*/}
+import * as yup from "yup"; {/*importing yup for validation*/}
 import {Logo}  from "../components/Logo";
 import GoogleIcon from "../assets/Google.png";
 import FacebookIcon from "../assets/Facebook.png";
 import AppleIcon from "../assets/Apple.png";
 
-const schema = yup.object().shape(
+{/*creating a schema for validation*/}
+const schema = yup.object().shape( 
     {
         name: yup.string().required("Name is required"),
+        email: yup.string().email("Invalid email format").required("Email is required"),
     }
 );
 
 const SignUp: React.FC = () => {
 
+    {/*using useForm hook to register the form and handle the submit*/}
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
 
+    {/*function to handle the submit*/}
     const onSubmit = (data: any) => {
         console.log("Form data", data);
     };
@@ -27,28 +31,39 @@ const SignUp: React.FC = () => {
         <Logo/>
       <h2 className="text-center text-lg font-medium mt-2">Create an account</h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center w-full p-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center w-full p-4"> {/*onSubmit function is called when the form is submitted*/}
+
+            {/*input fields for name, email, password and confirm password*/}
             <div className="flex flex-col items-center w-full max-w-sm">
 
             
+                {/*if there is an error in the name field, border color will be red, otherwise it will be gray*/}   
                 <input
                     type="text"
                     {...register("name")}
                     id="name"
                     placeholder="Name"
                     autoComplete="off"
-                    className={`mt-4 rounded border h-8 px-3 w-full ${errors.name ? "border-red-600" : "border-gray-300"}`}
-
+                    className={`mt-4 rounded border h-8 px-3 w-full ${errors.name ? "border-red-500" : "border-gray-300"}`} 
+                    
                 />
-                <p className="text-red-600 text-xs">{errors.name?.message}</p>
+                {/*if there is an error in the name field, display the error message*/}
+                <p className="text-red-500 text-xs">{errors.name?.message}</p>
 
+
+                {/* if there is an error in the email field, border color will be red, otherwise it will be gray */}
                 <input
                     type="text"
+                    {...register("email")}
                     id="email"
                     placeholder="Email"
                     autoComplete="off"
-                    className="mt-4 rounded border border-gray-300 h-8 px-3 w-full"
+                    className={`mt-4 rounded border h-8 px-3 w-full ${errors.email ? "border-red-500" : "border-gray-300"}`}
+                    
                 />
+                {/*if there is an error in the email field, display the error message*/}
+                <p className="text-red-500 text-xs">{errors.email?.message}</p>
+
 
                 <input
                     type="password"
