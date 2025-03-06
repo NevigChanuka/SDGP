@@ -1,7 +1,7 @@
 import React from "react";
 import Features_des from "./Features_Des";
-import image1 from "../assets/grammar_check.png"
-import image2 from "../assets/similar_words.png";
+import image1 from "../assets/grammar.png"
+import image2 from "../assets/similar.png";
 
 interface Feature {
   id: number;
@@ -14,14 +14,14 @@ const features: Feature[] = [
   {
     id: 1,
     image: image1,
-    title: "Correcting Grammatical errors",
+    title: "Correct Grammatical Errors",
     description:
       "Automatically detects and corrects grammatical mistakes in Sinhala text. Highlights errors and provides suggestions for improvement.",
   },
   {
     id: 2,
     image:image2,
-    title: "Suggest similar words",
+    title: "Suggest Similar Words",
     description:
       "Provides alternative words with similar meanings to enhance vocabulary. Helps users refine their writing by suggesting more suitable words.",
   },

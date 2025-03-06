@@ -3,7 +3,7 @@ import video1 from "../assets/video1.mp4";
 
 const About: React.FC = () => {
   return (
-    <div className="bg-gray-100 min-h-screen font-sans">
+    <div className="bg-gray-100 font-sans">
       {/* About Section */}
       <section
         id="about"
