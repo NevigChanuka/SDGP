@@ -23,7 +23,7 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="bg-gray-100 w-full p-6">
       {/* Centered Heading */}
       <h2 className="text-2xl font-bold mb-6 text-center">
         Got Questions? We’ve Got Answers!
