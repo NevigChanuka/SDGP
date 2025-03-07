@@ -50,6 +50,7 @@ export const Footer: React.FC = () => {
                         <br/>
                         {/* Grammar Checker Logo */}
                         <img src={Logo} alt="logo" className="w-40 h-20 flex flex-col items-center" />
+                        <p className="py-1"><b>Sinhala Grammar Checker</b></p>
                         
                     </div>
                 

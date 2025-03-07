@@ -31,11 +31,14 @@ const Features: React.FC = () => {
   return (
     <div className="bg-gray-100 py-10 pb-14 flex justify-center">
       <div className="container max-w-screen-xl mx-auto px-4">
-        <h1 className="mb-8 border-l-8 border-green-500 py-2 pl-4 text-3xl font-semibold">
-          Features
+
+        <h1 className="mb-8 border-l-8 border-green-500 py-2 pl-4 text-3xl font-semibold text-left">
+            Features
         </h1>
-        {/* Features Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+        
+        
+        {/* Features Section grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 sm:px-8 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-8 md:px-20">
           {features.map((feature) => (
             <Features_des key={feature.id} {...feature} />
           ))}

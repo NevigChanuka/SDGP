@@ -24,6 +24,11 @@ export default function FAQSection() {
 
   return (
     <div className="bg-gray-100 w-full p-6">
+        <div className="header-container flex flex-col sm:flex-row sm:justify-between items-start sm:items-center">
+          <h1 className="mb-8 border-l-8 border-green-500 py-2 pl-4 text-3xl font-semibold">
+            FAQ
+          </h1>
+        </div>
       {/* Centered Heading */}
       <h2 className="text-2xl font-bold mb-6 text-center">
         Got Questions? We’ve Got Answers!

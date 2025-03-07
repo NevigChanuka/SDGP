@@ -56,6 +56,12 @@ const HowItWorks:React.FC = () => {
   return (
     <div className="py-10">
     <div className="container">
+      
+      <h1 className="mb-8 border-l-8 border-green-500 py-2 pl-4 text-3xl font-semibold text-left">
+          How it works
+        </h1>
+      
+        
       <div className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6">
         <Slider {...settings}>
           {methods.map(({ id, title, description, img }) => (
