@@ -13,9 +13,11 @@ const Home:React.FC = () => {
    <>
       <NavBar /> 
       <About />
-      <Features />
-      <HowItWorks />
-      <FAQ />
+      <div className="max-w-screen-xl mx-auto px-4"> 
+        <Features />
+        <HowItWorks />
+        <FAQ />
+      </div>
       <Footer />
       </>
 
