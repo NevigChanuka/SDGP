@@ -2,9 +2,9 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Pic1 from "../assets/Grammar_robot_(1).png";
-import Pic2 from "../assets/Grammar_robot_(2).png";
-import Pic3 from "../assets/Grammar_robot_(3).png";
+import Pic1 from "../assets/robo1.jpg";
+import Pic2 from "../assets/robo2.jpg";
+import Pic3 from "../assets/robo3.jpg";
 
 
 interface Method {
