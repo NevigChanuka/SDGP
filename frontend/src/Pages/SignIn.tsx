@@ -28,6 +28,7 @@ const SignIn: React.FC = () => {
     <div className="w-[30%] h-[640px] mx-auto mt-12 bg-white p-10 rounded-2xl shadow-2xl border border-green-900">
       <Logo />
       <h2 className="text-center text-lg font-medium mt-2">Sign In</h2>
+      
 
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="flex flex-col space-y-6">
@@ -38,7 +39,7 @@ const SignIn: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               id="email"
               autoComplete="off"
-              className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring focus:ring-green-300 outline-none"
+              className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-1 focus:ring focus:ring-black-300 outline-none"
               placeholder=" "
             />
             <label htmlFor="email"
@@ -54,7 +55,7 @@ const SignIn: React.FC = () => {
               onChange={(e) => setPassword(e.target.value)}
               id="password"
               autoComplete="off"
-              className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring focus:ring-green-300 outline-none"
+              className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-1 focus:ring focus:ring-black-300 outline-none"
               placeholder=" "
             />
             <label htmlFor="password"
@@ -65,7 +66,7 @@ const SignIn: React.FC = () => {
 
           {error && <p className="text-red-500 text-xs text-center">{error}</p>}
 
-          <button type="submit" className="mt-1 w-24 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 mx-auto">
+          <button type="submit" className="mt-1 w-24 py-2 bg-green-400 text-white rounded-md hover:bg-green-600 mx-auto">
             Sign In
           </button>
 
