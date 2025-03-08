@@ -124,7 +124,7 @@ const SignUp: React.FC = () => {
 
         <p className="mt-2 text-xs sm:text-sm text-center">
             Already have an account? 
-            <a href="#" className="text-green-600 hover:underline"> Sign in</a>
+            <a href="/SignIn" className="text-green-600 hover:underline"> Sign in</a>
         </p>
 
       
