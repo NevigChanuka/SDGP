@@ -6,14 +6,18 @@ import AppleIcon from "../assets/Apple.png";
 
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const registeredEmail = localStorage.getItem("registeredEmail");
+    const registeredPassword = localStorage.getItem("registeredPassword");
 
     if (email !== registeredEmail) {
-      setError("Invalid email. Please sign up first.");
+      setError("Invalid Input. Please try again.");
+    } else if (password !== registeredPassword) {
+      setError("Invalid Input. Please try again.");
     } else {
       setError("");
       alert("Sign-in successful!");
@@ -43,11 +47,11 @@ const SignIn: React.FC = () => {
             </label>
           </div>
 
-          {error && <p className="text-red-500 text-xs">{error}</p>}
-
           <div className="relative">
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               id="password"
               autoComplete="off"
               className="peer w-full border border-gray-300 rounded px-3 pt-5 pb-2 focus:ring focus:ring-green-300 outline-none"
@@ -59,10 +63,11 @@ const SignIn: React.FC = () => {
             </label>
           </div>
 
-          <button type="submit" className="mt-4 w-28 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 mx-auto">
+          {error && <p className="text-red-500 text-xs text-center">{error}</p>}
+
+          <button type="submit" className="mt-1 w-24 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 mx-auto">
             Sign In
           </button>
-
 
           <div className="flex items-center justify-center w-full">
             <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4" />
@@ -70,7 +75,7 @@ const SignIn: React.FC = () => {
             <hr className="flex-grow h-[2px] bg-black border-none mx-2 sm:mx-4" />
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full mt-3">
+        <div className="flex flex-col items-center justify-center w-full mt-1">
             <button className="flex items-center justify-center w-4/5 h-8 px-4 my-1 text-sm font-bold text-black bg-white border border-black rounded-lg cursor-pointer">
                 <img src={GoogleIcon} alt="Google" className="w-4 h-4 mr-5"/>
                 Continue with Google
@@ -85,11 +90,9 @@ const SignIn: React.FC = () => {
             </button>
         </div>
 
-
-
           <p className="text-center text-sm">
             New User?
-            <a href="/SignUp" className="text-green-600 hover:underline ml-1">
+            <a href="/SignUp" className= "text-green-600 hover:underline ml-1">
               Create an account
             </a>
           </p>
