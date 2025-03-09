@@ -6,5 +6,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-  assetsInclude: ["**/*.JPG"], // Allow .JPG files
+  assetsInclude: ["**/*.                                                                                 "], // Allow .JPG files
 })
