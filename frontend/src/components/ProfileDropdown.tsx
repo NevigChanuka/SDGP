@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaUserCircle, FaMoon, FaSun } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ProfileDropdown: React.FC = () => {
+
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [darkMode, setDarkMode] = useState<boolean>(
     localStorage.getItem("theme") === "dark"
@@ -35,7 +39,7 @@ const ProfileDropdown: React.FC = () => {
   }, [darkMode]);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative z-50" ref={dropdownRef}>
       {/* Profile Icon */}
       <button onClick={toggleDropdown} className="focus:outline-none">
         <FaUserCircle className="text-3xl cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition" />
@@ -48,11 +52,11 @@ const ProfileDropdown: React.FC = () => {
             <li className="px-4 py-2 hover:bg-green-200 dark:hover:bg-green-500 cursor-pointer">
               Profile
             </li>
-            <li className="px-4 py-2 hover:bg-green-200 dark:hover:bg-green-500 cursor-pointer">
-              SignIn
+            <li className="px-4 py-2 hover:bg-green-200 dark:hover:bg-green-500 cursor-pointer" onClick={()=> navigate('/signin')}>
+              Sign In
             </li>
-            <li className="px-4 py-2 hover:bg-green-200 dark:hover:bg-green-500 cursor-pointer">
-              Signup
+            <li className="px-4 py-2 hover:bg-green-200 dark:hover:bg-green-500 cursor-pointer" onClick={()=> navigate('/signup')}>
+              Sign up
             </li>
             <li className="px-4 py-2 hover:bg-green-200 dark:hover:bg-green-500 cursor-pointer">
               Logout
