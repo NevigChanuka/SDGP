@@ -6,16 +6,12 @@ import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
 import About from '../components/About';
 import { DisplayCardsDemo } from "../components/demo";
-import SignIn from './SignIn';
-import SignUp from './SignUp';
+
 
 const Home:React.FC = () => {
 
   return (
     <div>
-      <SignIn/>
-      <SignUp/>
-  
    <>
       <NavBar /> 
       <About />
