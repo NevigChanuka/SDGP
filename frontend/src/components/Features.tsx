@@ -26,7 +26,7 @@ const features: Feature[] = [
     title: "Suggest Similar Words",
     description:
       "Provides alternative words with similar meanings to enhance vocabulary. Helps users refine their writing by suggesting more suitable words.",
-    link:'/',  
+    link:'/similar',  
   },
 ];
 
