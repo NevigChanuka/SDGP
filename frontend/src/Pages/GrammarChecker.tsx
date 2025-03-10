@@ -24,7 +24,13 @@ const GrammarChecker: React.FC = () => {
                                 <img className ='w-6 h-6 md:w-5 md:h-5' src={Upload_doc} alt="Upload doc image" />
                                 <p>Upload Document</p>
                             </button>
-                        </section>     
+                        </section>
+                        <section>
+                            <textarea className='border-2 rounded-lg p-3 w-[55%] h-70 resize-none bg-white md:h-70 xl:h-80 2xl:h-100'
+                                placeholder='මෙතන ලියන්න....' 
+                                
+                            ></textarea>
+                        </section>      
                     </div>
                 </div>
             </div>
