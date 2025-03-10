@@ -8,6 +8,7 @@ interface Feature {
   image: string;
   title: string;
   description: string;
+  link:string;
 }
 
 const features: Feature[] = [
@@ -17,6 +18,7 @@ const features: Feature[] = [
     title: "Correct Grammatical Errors",
     description:
       "Automatically detects and corrects grammatical mistakes in Sinhala text. Highlights errors and provides suggestions for improvement.",
+    link:'/grammar-checker',
   },
   {
     id: 2,
@@ -24,6 +26,7 @@ const features: Feature[] = [
     title: "Suggest Similar Words",
     description:
       "Provides alternative words with similar meanings to enhance vocabulary. Helps users refine their writing by suggesting more suitable words.",
+    link:  
   },
 ];
 
