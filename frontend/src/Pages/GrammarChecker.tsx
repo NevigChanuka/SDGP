@@ -30,7 +30,12 @@ const GrammarChecker: React.FC = () => {
                                 placeholder='මෙතන ලියන්න....' 
                                 
                             ></textarea>
-                        </section>      
+                        </section>
+                        <button 
+                            className='mt-4 px-6 py-2 border-2 border-green-600 bg-green-500 rounded-lg hover:bg-green-600' 
+                        >
+                            Check Grammar
+                        </button>       
                     </div>
                 </div>
             </div>
