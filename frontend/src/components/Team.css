@@ -1,7 +1,8 @@
 .wrapper .title {
+    width: 100%;
     text-align: center;
-    background: #00C21A;
-    display: inline-block; /* Makes the title box fit its content */
+    margin:10px;
+    border:none; /* Makes the title box fit its content */
     border-radius: 10px; /* Optional rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
 }
