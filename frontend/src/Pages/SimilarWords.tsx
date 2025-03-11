@@ -12,7 +12,26 @@ const SimilarWords: React.FC = () => {
             <Header />
             <div >
                 <Left_Sidebar/>
-                
+                <div className='items-center text-center size-full'>
+                    <div className='mt-20'>
+                        <h1 className='text-[18px] md:text-[24px]'>Paraphraser</h1>
+                            <div className="flex justify-center items-center mt-10">
+                                <div className="border-2 rounded-lg p-4 w-[65%] bg-white shadow-lg">
+                                    <div>
+                                        <textarea
+                                            className="w-[50%] h-50 sm:h-60 lg:h-70 xl:h-80 2xl:h-100 p-2 border-r outline-none resize-none "
+                                            placeholder="Enter text..."
+                                            
+                                        />
+                                        <textarea
+                                            className="w-[50%] h-50 sm:h-60 lg:h-70 xl:h-80 2xl:h-100 p-2 outline-none resize-none"
+                                            
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
                 <Right_Sidebar/>
             </div>
 
