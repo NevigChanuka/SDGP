@@ -2,8 +2,6 @@ import {useState} from 'react'
 import Header from '../components/Header.jsx'
 import Left_Sidebar from '../components/L_Sidebar.jsx'
 import Right_Sidebar from '../components/R_Sidebar.jsx'
-import Footer from '../components/Footer.jsx'
-
 
 const SimilarWords: React.FC = () => {
 
