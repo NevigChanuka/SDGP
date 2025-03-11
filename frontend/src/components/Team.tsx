@@ -78,7 +78,23 @@ const Team:React.FC = () => {
             <span>{member.role}</span>
           </h3>
         </div>
-        
+        <ul className="sci">
+          <li>
+            <a href={member.instagram} target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href={member.github} target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   ))}
