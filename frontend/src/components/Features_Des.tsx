@@ -1,12 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface FeatureProps {
   image: string;
   title: string;
   description: string;
+  link:string;
 }
 
-const Features_des: React.FC<FeatureProps> = ({ image, title, description }) => {
+const Features_des: React.FC<FeatureProps> = ({ image, title, description, link  }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="overflow-hidden rounded-lg shadow-lg h-145 w-120 flex flex-col items-center text-center p-4 transition-transform duration-300 transform hover:scale-105">
         {/*Responsive image*/}
@@ -21,7 +26,7 @@ const Features_des: React.FC<FeatureProps> = ({ image, title, description }) => 
         <p className="text-gray-500 text-sm">{description}</p>
         {/*Get Started button*/}
         <div className="flex justify-center">
-          <button className="flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-green-600 cursor-pointer hover:bg-green-500 text-white">
+          <button className="flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-green-600 cursor-pointer hover:bg-green-500 text-white" onClick={() => navigate(link)}>
             Get Started
             <svg
             className="w-5 h-5 inline-block"
