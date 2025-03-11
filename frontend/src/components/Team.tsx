@@ -1,4 +1,4 @@
-
+import './Team.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import pic01 from "../assets/Navig.jpg";
 import pic03 from "../assets/Supuni.jpg";
