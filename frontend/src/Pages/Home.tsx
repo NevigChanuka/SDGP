@@ -5,6 +5,7 @@ import FAQ from '../components/FAQ';
 import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
 import About from '../components/About';
+import Team from '../components/Team';
 import { DisplayCardsDemo } from "../components/demo";
 
 
@@ -20,6 +21,7 @@ const Home:React.FC = () => {
         <HowItWorks />
         <DisplayCardsDemo/>
         <FAQ />
+        <Team/>
       </div>
       <Footer />
       </>
