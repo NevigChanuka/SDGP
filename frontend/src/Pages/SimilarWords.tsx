@@ -28,6 +28,15 @@ const SimilarWords: React.FC = () => {
                                             
                                         />
                                     </div>
+                                    <div className="flex justify-between items-center mt-2">
+                                        <span className="text-sm text-gray-500">/200 Words</span>
+                                            <button
+                                                className="px-4 py-2 rounded border-2 border-green-600 bg-green-400 hover:bg-green-600"
+                                                
+                                            >
+                                                Paraphrase
+                                            </button>
+                                    </div>
                                 </div>
                             </div>
                     </div>
