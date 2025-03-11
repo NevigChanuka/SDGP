@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles } from "lucide-react";
+import { Pencil } from "lucide-react";
 
 interface DisplayCardProps {
   icon?: React.ReactNode;
@@ -13,7 +13,7 @@ interface DisplayCardProps {
 
 function DisplayCard({
   className,
-  icon = <Sparkles className="size-4 text-blue-300" />,
+  icon = <Pencil className="size-4 text-blue-300" />,
   question = "Is my data secure and private?",
   answer = "Discover amazing content", 
   titleClassName = "text-blue-500",
