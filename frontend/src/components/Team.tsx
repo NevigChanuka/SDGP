@@ -23,6 +23,36 @@ const Team:React.FC = () => {
       role: "Web Analyst",
       img: pic01,
     },
+    {
+      name: "Dinuka",
+      role: "UI/UX Designer",
+      img: pic06,
+    },
+    {
+      name: "Supuni",
+      role: "Front-End Developer",
+      img: pic03,
+    },
+    {
+      name: "Imandi",
+      role: "Back-End Developer",
+      img: pic04,
+      
+    },
+    {
+      name: "Kalana",
+      role: "Project Manager",
+      img: pic05,
+      
+    },
+    {
+      name: "Akalanka",
+      role: "Software Engineer",
+      img: pic07,
+      instagram: "https://www.instagram.com/_akalanka_wihangana/",
+      github: "https://github.com/akalankawihangana",
+      linkedin: "https://www.linkedin.com/in/akalanka-wihangana-447129340/",
+    },
   ].map((member, index) => (
     <div className="card" key={index}>
       <div className="imbBx">
