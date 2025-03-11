@@ -1,4 +1,4 @@
-
+import './Team.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import pic01 from "../assets/Navig.jpg";
 import pic03 from "../assets/Supuni.jpg";
@@ -22,28 +22,41 @@ const Team:React.FC = () => {
       name: "Nevig",
       role: "Web Analyst",
       img: pic01,
+      instagram: "",
+      github: "https://github.com/NevigChanuka",
+      linkedin: "",
     },
     {
       name: "Dinuka",
       role: "UI/UX Designer",
       img: pic06,
+      instagram: "https://www.instagram.com/dinu_viraji._/",
+      github: " https://github.com/dinukaviraji ",
+      linkedin: "https://www.linkedin.com/in/dinuka-viraji-521356278/ ",
     },
     {
       name: "Supuni",
       role: "Front-End Developer",
       img: pic03,
+      instagram: "https://instagram.com/supuni_profile",
+      github: "https://github.com/supuni_profile",
+      linkedin: "https://linkedin.com/in/supuni_profile",
     },
     {
       name: "Imandi",
       role: "Back-End Developer",
       img: pic04,
-      
+      instagram: " https://www.instagram.com/ima.kik/ ",
+      github: "https://github.com/imandikavithma",
+      linkedin: "https://www.linkedin.com/in/imandi-kavithma-7bba24294",
     },
     {
       name: "Kalana",
       role: "Project Manager",
       img: pic05,
-      
+      instagram: "https://www.instagram.com/kalana_1061?igsh=MWc5b2hoMDVodGlvdg==",
+      github: "https://github.com/Kalana232491/",
+      linkedin: "https://linkedin.com/in/kalana_profile",
     },
     {
       name: "Akalanka",
@@ -58,7 +71,15 @@ const Team:React.FC = () => {
       <div className="imbBx">
         <img src={member.img} alt={member.name} />
       </div>
-      
+      <div className="content">
+        <div className="contentBx">
+          <h3>
+            {member.name} <br />
+            <span>{member.role}</span>
+          </h3>
+        </div>
+        
+      </div>
     </div>
   ))}
 </div>
