@@ -71,7 +71,15 @@ const Team:React.FC = () => {
       <div className="imbBx">
         <img src={member.img} alt={member.name} />
       </div>
-      
+      <div className="content">
+        <div className="contentBx">
+          <h3>
+            {member.name} <br />
+            <span>{member.role}</span>
+          </h3>
+        </div>
+        
+      </div>
     </div>
   ))}
 </div>
