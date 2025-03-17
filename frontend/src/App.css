@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+.body {
+  background-color: #9FE2BF;
+}
+
+@font-face {
+    font-family: 'CCWelikala';
+    src: url('./fonts/CCWelikala.ttf') 
+    format('truetype');
+  }
+  /* body {
+    font-family: CondenseCollege ;
+  } */
+@theme{
+    --font-CCWelikala: CCWelikala;
+}
+
+
+@font-face {
+  font-family: 'sandaru';
+  src: url('./fonts/sandaru.ttf') 
+  format('truetype');
+}
+/* body {
+  font-family: CondenseCollege ;
+} */
+@theme{
+  --font-sandaru: sandaru;
+}
+
+
+@font-face {
+  font-family: 'sinhasithumina';
+  src: url('./fonts/sinhasithumina.ttf') 
+  format('truetype');
+}
+/* body {
+  font-family: CondenseCollege ;
+} */
+@theme{
+  --font-sinhasithumina: sinhasithumina;
+}
+
+
+
+@font-face {
+  font-family: 'nelumpc';
+  src: url('./fonts/nelumpc.ttf') 
+  format('truetype');
+}
+/* body {
+  font-family: CondenseCollege ;
+} */
+@theme{
+  --font-nelumpc: nelumpc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@theme {
+
+--animate-fadeInL: fadeInL 0.8s ease;
+
+@keyframes fadeInL { 
+
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(50px); /* Changed to move right */
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Added cubic-bezier for smoother feel*/
+}
+
+.fade-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+   
+    /* 0% {
+      opacity: 0;
+      transform: translateX(500px);
+    }
+
+    100% {
+      opacity: 0.5;
+      transform: translateX(200px);
+    }
+
+
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    } */
+  }
+
+
+}
