@@ -3,11 +3,9 @@ import "../App.css";
 import "animate.css";
 import { useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-import video from "../assets/Video.mp4";
+
 
 const Home: React.FC = () => {
-  const originalSrc = "srcassetspic1.png";
-  const hoverSrc = "srcassetspicg1.png";
 
   const divRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -65,6 +63,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
+  
     <div className="flex flex-col">
       <div className="flex justify-center items-center mt-20 w-full h-100 mb-30">
         <div className="w-140 h-100 relative">
