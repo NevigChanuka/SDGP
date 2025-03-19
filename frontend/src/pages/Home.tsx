@@ -5,6 +5,7 @@ import { useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
 
+
 const Home: React.FC = () => {
 
   const divRef = useRef<(HTMLDivElement | null)[]>([]);
