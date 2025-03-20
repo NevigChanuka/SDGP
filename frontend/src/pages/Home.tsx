@@ -89,7 +89,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-evenly items-center  w-auto h-400 bg-amber-200 ">
+      <div className="flex flex-col justify-evenly items-center  w-auto h-400">
         <div className="w-full h-90 ">
           <div
             id="1"

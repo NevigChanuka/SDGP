@@ -63,8 +63,8 @@ const NavBar: React.FC = () => {
                       ref={divRef}
                       className="flex flex-col justify-evenly left-20 top-11 mt-4 p-3 h-30 w-65 shadow-lg  border-1 bg-white  absolute"
                     >
-                      <span className="hover:text-white">jHdlrk mÍlaIlh</span>
-                      <span className="hover:text-white">iudk mo fiùu</span>
+                      <span className="hover:text-emerald-800">jHdlrk mÍlaIlh</span>
+                      <span className="hover:text-emerald-800">iudk mo fiùu</span>
                     </div>
                   )}
               </li>
@@ -78,8 +78,8 @@ const NavBar: React.FC = () => {
                       ref={divRef}
                       className="flex flex-col justify-evenly left-50 top-11 mt-4 p-3 h-30 w-65 border-1 shadow-lg  bg-white absolute"
                     >
-                      <span className="hover:text-white">jHdlrk Wmfoia </span>
-                      <span className="hover:text-white">jpk iuQyh </span>
+                      <span className="hover:text-emerald-800">jHdlrk Wmfoia </span>
+                      <span className="hover:text-emerald-800">jpk iuQyh </span>
                     </div>
                   )}
               </li>
