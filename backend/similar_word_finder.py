@@ -17,7 +17,7 @@ get_word = input("word: ")
 def word_prepro(text):
     # sinhala_pattern = r'[^\u200d\u0D80-\u0DFF]+'
     # word = re.sub(sinhala_pattern, "", text).split(" ")
-    # cleared_word =re.sub(r"\u200d", "", word[0])
+    # cleared_ word =re.sub(r"\u200d", "", word[0])
 
     sinhala_pattern = r'[\u200d\u0D80-\u0DFF]+'
     sentences = re.findall(sinhala_pattern, get_word)
