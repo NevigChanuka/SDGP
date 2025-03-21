@@ -66,7 +66,7 @@ const Home: React.FC = () => {
   return (
   
     <div className="flex flex-col">
-      <div className="flex justify-center items-center mt-20 w-full h-100 mb-30">
+      <div className="flex justify-center items-center mt-20 w-full h-100 mb-30 ">
         <div className="w-140 h-100 relative">
           <span className="font-sinhasithumina text-7xl">
             Tfí ,sùug ksjerÈ u. fmkaùuæ
@@ -82,8 +82,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className=" flex w-100 h-100  ">
-          <video className="w-full h-auto" loop autoPlay muted>
+        <div className=" flex justify-center w-110 h-100 ml-8">
+          <video className="w-full h-full object-cover" loop autoPlay muted>
             <source src={video} type="video/mp4" />
           </video>
         </div>
