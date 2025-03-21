@@ -8,7 +8,8 @@ import About from "./components/About.tsx";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      
+      <NavBar/>
       <Home />
       <About/>
       <FAQ />
