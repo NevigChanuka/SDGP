@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/logobr.png";
+import image from "../assets/newlogo.png";
 import { useState, useEffect, useRef } from "react";
 
 const NavBar: React.FC = () => {

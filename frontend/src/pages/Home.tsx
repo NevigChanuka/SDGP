@@ -3,7 +3,7 @@ import "../App.css";
 import "animate.css";
 import { useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-
+import video from "../assets/Video.mp4";
 
 
 const Home: React.FC = () => {
@@ -83,8 +83,8 @@ const Home: React.FC = () => {
         </div>
 
         <div className=" flex w-100 h-100  ">
-          <video className="w-full h-auto" loop autoPlay>
-            <source src="src\assets\lqVideo.mp4" type="video/mp4" />
+          <video className="w-full h-auto" loop autoPlay muted>
+            <source src={video} type="video/mp4" />
           </video>
         </div>
       </div>
