@@ -68,7 +68,7 @@ const Home: React.FC = () => {
     <div className="flex flex-col">
       <div className="flex justify-center items-center mt-20 w-full h-100 mb-30 ">
         <div className="w-140 h-100 relative">
-          <span className="font-sinhasithumina text-7xl">
+          <span className="font-sinhasithumina text-7xl text-emerald-700">
             Tfí ,sùug ksjerÈ u. fmkaùuæ
           </span>
           <p className="font-sandaru text-2xl">
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
           <div
             id="1"
             ref={addDivRef}
-            className="flex justify-evenly text-black  border-r-2 border-t-2 border-b-2 border-emerald-900 h-90   hover:bg-emerald-900  hover:text-white duration-500 mb-10 mr-30"
+            className="flex justify-evenly text-black  border-r-2 border-t-2 border-b-2 border-emerald-700 h-90   hover:bg-emerald-700  hover:text-white duration-500 mb-10 mr-30"
           >
             <div className=" w-100 h-100 content-center ">
               <div>
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
           <div
             id="0"
             ref={addDivRef}
-            className="flex justify-evenly h-90  text-black  border-l-2 border-t-2 border-b-2  border-emerald-900   hover:bg-emerald-900  hover:text-white duration-500 mb-10 ml-30 "
+            className="flex justify-evenly h-90  text-black  border-l-2 border-t-2 border-b-2  border-emerald-700   hover:bg-emerald-700  hover:text-white duration-500 mb-10 ml-30 "
           >
             <div className="flex justify-center items-center w-100 h-100 ">
               <img src="\src\assets\picbr2.png" alt="png2" />
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
           <div
             id="1"
             ref={addDivRef}
-            className="flex justify-evenly  h-90   text-black  border-r-2 border-t-2 border-b-2  border-emerald-900  hover:bg-emerald-900  hover:text-white duration-500 mb-10 mr-30"
+            className="flex justify-evenly  h-90   text-black  border-r-2 border-t-2 border-b-2  border-emerald-700  hover:bg-emerald-700  hover:text-white duration-500 mb-10 mr-30"
           >
             <div className="w-100 h-100 content-center ">
               <div>
@@ -158,7 +158,7 @@ const Home: React.FC = () => {
           <div
             id="0"
             ref={addDivRef}
-            className="flex justify-evenly h-90  text-black  border-l-2 border-t-2 border-b-2  border-emerald-900 hover:bg-emerald-900  hover:text-white duration-500 ml-30"
+            className="flex justify-evenly h-90  text-black  border-l-2 border-t-2 border-b-2  border-emerald-700 hover:bg-emerald-700  hover:text-white duration-500 ml-30"
           >
             <div className="flex justify-center items-center w-100 h-100">
               <img src="\src\assets\picbr4.png" alt="png2" />
