@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask JSON Form</title>
+</head>
+<body>
+    <h2>synonyms</h2>
+    <form id="jsonForm">
+        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Response:</h3>
+    <div id="responseOutput"></div>
+
+    <script>
+        document.getElementById("jsonForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const username = document.getElementById("username").value;
+            const responseOutput = document.getElementById("responseOutput");
+
+            fetch("/synonym-words", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ word: username })
+            })
+            .then(response => response.json())
+            .then(data => {
+                responseOutput.innerText = "Server Response: " + JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                responseOutput.innerText = "Error: " + error;
+                console.error("Error:", error);
+            });
+        });
+    </script>
+
+
+
+
+    <h2>antonyms</h2>
+        <form id="jsonForm1">
+            <input type="text" id="username1" name="username" placeholder="Enter your name" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3>Response:</h3>
+        <div id="responseOutput1"></div>
+
+        <script>
+            document.getElementById("jsonForm1").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const username = document.getElementById("username1").value;
+                const responseOutput = document.getElementById("responseOutput1");
+
+                fetch("/antonyms-words", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ word: username })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    responseOutput.innerText = "Server Response: " + JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    responseOutput.innerText = "Error: " + error;
+                    console.error("Error:", error);
+                });
+            });
+        </script>
+
+`    <h2>antonyms</h2>
+            <form id="jsonForm2">
+                <input type="text" id="username2" name="username" placeholder="Enter your name" required>
+                <button type="submit">Submit</button>
+            </form>
+
+            <h3>Response:</h3>
+            <div id="responseOutput2"></div>
+
+            <script>
+                document.getElementById("jsonForm2").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    const username = document.getElementById("username2").value;
+                    const responseOutput = document.getElementById("responseOutput2");
+
+                    fetch("/paired-words", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ word: username })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        responseOutput.innerText = "Server Response: " + JSON.stringify(data, null, 2);
+                    })
+                    .catch(error => {
+                        responseOutput.innerText = "Error: " + error;
+                        console.error("Error:", error);
+                    });
+                });
+            </script>
+
+    <h2>Parquet Data</h2>
+    <button onclick="fetchData()">Load Data</button>
+    <pre id="output"></pre>
+
+    <script>
+        function fetchData() {
+            fetch('/get-parquet-data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+`
+</body>
+</html>
