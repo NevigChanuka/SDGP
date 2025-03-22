@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/logobr.png";
+import image from "../assets/newlogo.png";
 import { useState, useEffect, useRef } from "react";
 
 const NavBar: React.FC = () => {
@@ -45,48 +45,48 @@ const NavBar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="relative">
-          <div className="font-CCWelikala text-zinc-950 text-2xl">
+          <div className="font-sandaru text-zinc-950 text-2xl">
             <ul className="flex space-x-10">
             
               <li>
                 <button className="">
-                  <span className="font-semibold border-[#0d8065]  hover:border-b-3 p-1">uq,a msgqj</span>
+                  <span className="font-semibold border-b-emerald-700  hover:border-b-3 p-1">uq,a msgqj</span>
                 </button>
               </li>
 
               <li>
                 <button className="" onClick={() => toggleVisibility("link1")}>
-                  <span className="font-semibold border-[#0d8065]  hover:border-b-3 p-1">fuj,ï</span>
+                  <span className="font-semibold border-emerald-700  hover:border-b-3 p-1">fuj,ï</span>
                 </button>
                   {isVisible === "link1" && (
                     <div
                       ref={divRef}
                       className="flex flex-col justify-evenly left-20 top-11 mt-4 p-3 h-30 w-65 shadow-lg  border-1 bg-white  absolute"
                     >
-                      <span className="hover:text-emerald-800">jHdlrk mÍlaIlh</span>
-                      <span className="hover:text-emerald-800">iudk mo fiùu</span>
+                      <span className="hover:text-emerald-700 hover:font-semibold">jHdlrk mÍlaIlh</span>
+                      <span className="hover:text-emerald-700 hover:font-semibold">iudk mo fiùu</span>
                     </div>
                   )}
               </li>
 
               <li>
                 <button className="" onClick={() => toggleVisibility("link3")}>
-                  <span className="font-semibold border-[#0d8065]  hover:border-b-3 p-1">bf.kSu</span>
+                  <span className="font-semibold border-emerald-700 hover:border-b-3 p-1">bf.kSu</span>
                 </button>
                   {isVisible === "link3" && (
                     <div 
                       ref={divRef}
                       className="flex flex-col justify-evenly left-50 top-11 mt-4 p-3 h-30 w-65 border-1 shadow-lg  bg-white absolute"
                     >
-                      <span className="hover:text-emerald-800">jHdlrk Wmfoia </span>
-                      <span className="hover:text-emerald-800">jpk iuQyh </span>
+                      <span className="hover:text-emerald-700 hover:font-semibold">jHdlrk Wmfoia </span>
+                      <span className="hover:text-emerald-700 hover:font-semibold">jpk iuQyh </span>
                     </div>
                   )}
               </li>
 
               <li>
                 <button className="" onClick={() => toggleVisibility("link4")}>
-                  <span className="font-semibold border-[#0d8065]  hover:border-b-3 p-1">woyia yd fhdackd</span>
+                  <span className="font-semibold border-emerald-700  hover:border-b-3 p-1">woyia yd fhdackd</span>
                 </button>
               </li>
 
@@ -95,7 +95,7 @@ const NavBar: React.FC = () => {
         </div>
 
         <div>
-          <button className="font-CCWelikala border-4 border-[#0d8065] w-30 h-10 rounded-full hover:bg-[#0d8065] hover:text-white hover:scale-110  transition duration-400">
+          <button className="font-CCWelikala border-4 border-emerald-700 w-30 h-10 rounded-full hover:bg-emerald-700 hover:text-white hover:scale-110  transition duration-400">
             <span>msúfikak</span>
           </button>
         </div>
