@@ -1,4 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template, request, jsonify
+
+def load_data(filename):
+    df = pd.read_parquet(filename)  # Load Parquet file
+    data = df.head(20).to_dict(orient='records')  # Convert first 20 rows to JSON
+
+    return data
 
 def word_finder(text,file_name):
 
@@ -84,6 +90,21 @@ def paired_words_finder():
 
         # Return to frontend
         return jsonify({"response": res.tolist()})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/get-parquet-data', methods=['GET'])
+def get_parquet_data():
+    try:
+        filename_list = ['synonym_data.parquet', 'antonyms_data.parquet', 'couplets_data.parquet']
+
+        word_data = []
+        for filename in filename_list:
+            data = load_data(filename)
+            word_data.append(data)
+
+        return jsonify(word_data)
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
