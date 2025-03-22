@@ -44,12 +44,33 @@ def synonyms_finder():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-        
+
 
 @app.route('/antonyms-words', methods=['POST'])
 def antonyms_finder():
     try:
         file_name = 'antonyms_data.parquet'
+
+        # Get word from frontend
+        data = request.get_json()
+        word = data.get("word", "").strip()
+
+        # word preprocess
+        cleared_word = word_prepro(word)[0]
+
+        # find the word
+        res = word_finder(cleared_word, file_name)
+
+        # Return to frontend
+        return jsonify({"response": res.tolist()})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/paired-words', methods=['POST'])
+def paired_words_finder():
+    try:
+        file_name = 'couplets_data.parquet'
 
         # Get word from frontend
         data = request.get_json()
