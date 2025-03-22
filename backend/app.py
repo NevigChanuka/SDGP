@@ -1,14 +1,23 @@
-from flask import Flask, render_template, request, jsonify 
+from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import re
 
 
 
 def load_data(filename):
-    df = pd.read_parquet(filename)  # Load Parquet file
+    df = pd.read_parquet(filename, engine='pyarrow')  # Load Parquet file
     data = df.head(20).to_dict(orient='records')  # Convert first 20 rows to JSON
 
-    return data
+    dict_list = []
+    # Access all dictionaries in the list
+    for dict in data:
+
+        # Remove all key-value pairs where the value is 'nan'
+        cleaned_dict = {key: value for key, value in dict.items() if value != "nan"}
+        dict_list.append(cleaned_dict)
+
+    return dict_list
+
 
 def word_finder(text,file_name):
 
