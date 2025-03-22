@@ -66,7 +66,7 @@ const NavBar: React.FC = () => {
                       ref={divRef}
                       className="flex flex-col justify-evenly left-20 top-11 mt-4 p-3 h-30 w-65 shadow-lg  border-1 bg-white  absolute"
                     >
-                      <span className="hover:text-emerald-700 hover:font-semibold">jHdlrk mÍlaIlh</span>
+                      <span className="hover:text-emerald-700 hover:font-semibold" onClick={() =>navigate('/grammar-checker')}>jHdlrk mÍlaIlh</span>
                       <span className="hover:text-emerald-700 hover:font-semibold">iudk mo fiùu</span>
                     </div>
                   )}
