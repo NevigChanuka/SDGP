@@ -4,6 +4,11 @@ import "animate.css";
 import { useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import video from "../assets/Video.mp4";
+import NavBar from "../components/NavBar.tsx";
+import Footer from "../components/Footer.tsx";
+import FAQ from "../components/FAQ.tsx";
+import About from "../components/About.tsx";
+
 
 
 const Home: React.FC = () => {
@@ -64,7 +69,8 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-  
+    <div>
+      <NavBar />
     <div className="flex flex-col">
       <div className="flex justify-center items-center mt-20 w-full h-100 mb-30 ">
         <div className="w-140 h-100 relative">
@@ -176,6 +182,10 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+    <About />
+    <FAQ /> 
+    <Footer />
     </div>
   );
 };
