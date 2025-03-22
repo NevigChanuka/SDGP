@@ -1,10 +1,13 @@
 import React from "react";
 import image from "../assets/newlogo.png";
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavBar: React.FC = () => {
   const [isVisible, setIsVisible] = useState<string | null>(null);
   const divRef = useRef<HTMLDivElement | null>(null);
+
+  const navigate = useNavigate();
 
   
   // Function to show/hide the div when a button is clicked
@@ -39,8 +42,8 @@ const NavBar: React.FC = () => {
   return (
     <nav className="backdrop-blur-xs backdrop-grayscale border-b-1 p-3  sticky top-0 z-1">
       <div className="flex justify-between items-center ">
-        <div className="ml-5 w-25 h-10">
-          <img className="" src={image} alt="Vyakarana logo" />
+        <div className="ml-5 w-25 h-10 cursor-pointer">
+          <img className="" src={image} alt="Vyakarana logo" onClick={() =>navigate('/')}/>
         </div>
 
         {/* Navigation Links */}
