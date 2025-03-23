@@ -18,11 +18,11 @@ const SimilarWords: React.FC = () => {
     });
 
     // State to store the transliterated Sinhala text
-    const [sinhalaText, setSinhalaText] = useState('');
+    const [responseData, setResponseData] = useState<any>(null);
 
     // Callback function to handle changes in the SinhalaTyping component
     const handleChange = async (value: string) => {
-        setSinhalaText(value); // Update state with the transliterated Sinhala text
+         
 
  // Send the transliterated text to the backend
         try {
@@ -31,6 +31,7 @@ const SimilarWords: React.FC = () => {
 
             // Handle response
             console.log('Backend response:', response.data);
+            setResponseData(response.data);
         } catch (error) {
             console.error('Error sending data to backend:', error);
         }
@@ -55,13 +56,16 @@ const SimilarWords: React.FC = () => {
                                     
                                     readOnly
                                 /> */}
-                                {/* Display the transliterated Sinhala text */}
-                                <div className="mt-4 p-2 border rounded-lg bg-gray-100">
-                                <h3 className="font-semibold">Output:</h3>
-                                <p>{sinhalaText}</p>
 
 
-                                </div>
+                                {responseData && (
+                                    <div className=" mt-4 p-2 border rounded-lg bg-gray-100">
+                                        <h3 className="font-semibold">Response Data:</h3>
+                                        <pre>{JSON.stringify(responseData, null, 2)}</pre>
+                                    </div>)}
+
+
+                                
                             </div>
                         </div>
                     </div>
@@ -69,7 +73,7 @@ const SimilarWords: React.FC = () => {
                 <Right_Sidebar/>
             </div>
         </div>
-    )
+        )
 }
 
 export default SimilarWords;
