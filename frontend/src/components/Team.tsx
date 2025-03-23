@@ -27,9 +27,9 @@ export interface TeamMember {
       description: 'Led the Project, ensuring seamless coordination and technical execution. Contributed to the both frontend and backend. Managed project workflows, audited team contributions, and guided the team toward creating an innovative vehicle management solution.',
       image: Nevig,
       socialLinks: {
-        instagram: 'https://www.instagram.com/ima.kik/ ',
-        linkedin: 'https://www.linkedin.com/in/imandi-kavithma-7bba24294',
-        github: 'https://github.com/imandikavithma'
+        instagram: '#',
+        linkedin: 'https://www.linkedin.com/in/nevig-chanuka-1614a3268/',
+        github: 'https://github.com/NevigChanuka'
       }
     },
     {
@@ -51,9 +51,9 @@ export interface TeamMember {
       description: 'Manage the project, ensuring seamless collaboration and high-quality execution. Designed the UI/UX, developed the backend, and implemented the mobile application.',
       image: Imandi,
       socialLinks: {
-        instagram: '#',
-        linkedin: '#',
-        github: '#'
+        instagram: 'https://www.instagram.com/ima.kik/',
+        linkedin: 'https://www.linkedin.com/in/imandi-kavithma-7bba24294',
+        github: 'https://github.com/imandikavithma'
       }
     },
     {
@@ -63,9 +63,9 @@ export interface TeamMember {
       description: 'Led the presenting and pitching of the project. Developed the frontend interface with a focus on user experience and visual appeal.',
       image: Supuni,
       socialLinks: {
-        instagram: '#',
-        linkedin: '#',
-        github: '#'
+        instagram: 'https://www.instagram.com/supuni__s?igsh=MXUxM253ZnFwY21waQ==',
+        linkedin: 'https://www.linkedin.com/in/supuni-shashikala-860554294/',
+        github: 'https://github.com/Supuni1868'
       }
     },
     {
@@ -75,9 +75,9 @@ export interface TeamMember {
       description: 'Developed the frontend interface with a focus on responsive and visually appealing user experiences. Contributed to UI/UX design and mobile app development.',
       image: Kalana,
       socialLinks: {
-        instagram: '#',
-        linkedin: '#',
-        github: '#'
+        instagram: 'https://www.instagram.com/kalana_1061?igsh=MWc5b2hoMDVodGlvdg==',
+        linkedin: 'www.linkedin.com/in/kalana-karunarathna-031a2a2b7',
+        github: 'https://github.com/Kalana232491'
       }
     },
     {
@@ -87,9 +87,9 @@ export interface TeamMember {
       description: 'Led documentation efforts and conducted in-depth research to enhance system performance and reliability. Contributed to both frontend and backend development.',
       image: Akalanka,
       socialLinks: {
-        instagram: '#',
-        linkedin: '#',
-        github: '#'
+        instagram: 'https://www.instagram.com/_akalanka_wihangana?igsh=YmJuZTFrNnprYjl3&utm_source=qr',
+        linkedin: 'https://www.linkedin.com/in/akalanka-wihangana-447129340/',
+        github: 'https://github.com/akalankawihangana'
       }
     }
   ];
