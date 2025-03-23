@@ -8,6 +8,8 @@ import NavBar from "../components/NavBar.tsx";
 import Footer from "../components/Footer.tsx";
 import FAQ from "../components/FAQ.tsx";
 import About from "../components/About.tsx";
+import {TeamCard} from "../components/TeamCard.tsx";
+import { teamMembers } from "../components/Team.tsx";
 
 
 
@@ -184,7 +186,23 @@ const Home: React.FC = () => {
       </div>
     </div>
     <About />
-    <FAQ /> 
+    <FAQ />
+    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-5xl font-sinhasithumina">wmf.a lKavdhu yuqjkak</h2>
+          <p className="mt-4 text-lg text-gray-500 font-CCWelikala">
+            úYsIag;ajh ,nd §u i|yd tlaj lghq;= lrk lemjQ jD;a;slhka
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {teamMembers.map((member) => (
+            <TeamCard key={member.id} member={member} />
+          ))}
+        </div>
+      </div>
+    </div>
     <Footer />
     </div>
   );
