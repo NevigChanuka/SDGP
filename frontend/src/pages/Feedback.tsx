@@ -30,6 +30,14 @@ const Feedback: React.FC = () => {
                                 placeholder="මෙතන ලියන්න...."
                                 value={feedback}
                             />
+                            <div className="flex justify-end mt-3">
+                                <button 
+                                    type="submit"
+                                    className=" px-6 py-2 rounded-lg border-2 cursor-pointer font-CCWelikala border-[#0d8065] hover:bg-[#0d8065] hover:text-white hover:scale-110  transition duration-400"
+                                >
+                                    bÈßm;a lrkak
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -42,4 +50,3 @@ const Feedback: React.FC = () => {
 }
 
 export default Feedback;
-
