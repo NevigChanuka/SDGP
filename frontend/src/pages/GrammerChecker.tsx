@@ -5,6 +5,7 @@ import Right_Sidebar from '../components/R_Sidebar.tsx';
 import SinhalaTyping from '../components/SinhalaTyping.tsx';
 import Paste_text from "../assets/textpaste_img.png";
 import Upload_doc from "../assets/uploadfile_img.png";
+import axios from 'axios';
 
 
 const GrammarCheckerPage: React.FC = () => {
@@ -12,7 +13,7 @@ const GrammarCheckerPage: React.FC = () => {
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
     const handleTextChange = (value: string) => {
-        setText(value);
+        
     };
 
     const handlePasteText = () => {
@@ -55,6 +56,15 @@ const GrammarCheckerPage: React.FC = () => {
         fileInput.click();
         document.body.removeChild(fileInput);
     };
+
+    const sendTextToBackend = async () => {
+        try {
+            const response = await axios.post<{message: String}>('#', {text});
+            console.log('Response:', response.data);
+        } catch (error) {
+            console.error('Error', error);
+        }
+    };
     
     return (
         <div className='relative w-full flex flex-col'>
@@ -88,6 +98,12 @@ const GrammarCheckerPage: React.FC = () => {
                                         </button>
                                     </div>
                                 )}
+                                <button 
+                                    className='absolute right-0 mt-4 px-6 py-2 border-3 rounded-lg cursor-pointer font-CCWelikala border-[#0d8065] hover:bg-[#0d8065] hover:text-white hover:scale-110  transition duration-400' 
+                                    onClick={sendTextToBackend}
+                                >
+                                    mÍlaId lrkak'
+                                </button> 
                             </div>
                         </section>    
                     </div>
