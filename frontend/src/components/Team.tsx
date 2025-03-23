@@ -27,9 +27,9 @@ export interface TeamMember {
       description: 'Led the Project, ensuring seamless coordination and technical execution. Contributed to the both frontend and backend. Managed project workflows, audited team contributions, and guided the team toward creating an innovative vehicle management solution.',
       image: Nevig,
       socialLinks: {
-        instagram: '#',
-        linkedin: '#',
-        github: '#'
+        instagram: 'https://www.instagram.com/ima.kik/ ',
+        linkedin: 'https://www.linkedin.com/in/imandi-kavithma-7bba24294',
+        github: 'https://github.com/imandikavithma'
       }
     },
     {
@@ -39,9 +39,9 @@ export interface TeamMember {
       description: 'Led the Flutter project, gathering and motivating the team to deliver high-quality results. Designed and implemented the mobile app\'s driver dashboard and driving history features, ensuring a seamless user experience.',
       image: Dinuka,
       socialLinks: {
-        instagram: '#',
-        linkedin: '#',
-        github: '#'
+        instagram: 'https://www.instagram.com/dinu_viraji._/',
+        linkedin: 'https://www.linkedin.com/in/dinuka-viraji-521356278/ ',
+        github: 'https://github.com/dinukaviraji'
       }
     },
     {
