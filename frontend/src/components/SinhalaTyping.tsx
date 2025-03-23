@@ -6,6 +6,7 @@ export interface SinhalaTypingProps {
   className?: string;
   rows?: number;
   onChange?: (value: string) => void;
+  onSelect?: (selectedText: string) => void;
   value?: string;
   variant?: 'textarea' | 'input';
   size?: 'sm' | 'md' | 'lg';
@@ -16,6 +17,7 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
   className = "", 
   rows = 4,
   onChange,
+  onSelect,
   value,
   variant = 'textarea',
   size = 'md',
@@ -25,6 +27,7 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
   const [cursorPosition, setCursorPosition] = useState<number>(0);
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const inputRef = useRef<HTMLTextAreaElement | HTMLInputElement>(null);
+  const displayRef = useRef<HTMLDivElement>(null);
 
   useImperativeHandle(ref, () => inputRef.current as HTMLTextAreaElement | HTMLInputElement);
 
@@ -60,7 +63,13 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
   const processText = (inputText: string) => {
     const words = inputText.split(/(\s+)/);
     const processedWords = words.map(word => (/^\s+$/.test(word) ? word : transliterateWord(word)));
-    setDisplayText(processedWords.join(''));
+    const newDisplayText = processedWords.join('');
+    setDisplayText(newDisplayText);
+    
+    // Make sure to pass the new display text with Sinhala characters to onChange
+    if (onChange) {
+      onChange(newDisplayText);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
@@ -69,10 +78,6 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
     processText(newText);
     
     setCursorPosition(e.target.selectionStart || 0);
-
-    if (onChange) {
-      onChange(displayText);
-    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
@@ -89,6 +94,18 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
       e.preventDefault();
       setInputText('');
       setDisplayText('');
+      if (onChange) {
+        onChange('');
+      }
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (onSelect && window.getSelection) {
+      const selection = window.getSelection();
+      if (selection && selection.toString().trim()) {
+        onSelect(selection.toString().trim());
+      }
     }
   };
 
@@ -127,6 +144,7 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
     wordBreak: 'break-word' as const,
     fontFamily: 'Noto Sans Sinhala, sans-serif',
   };
+  
 
   return (
     <div className={baseClasses}>
@@ -140,6 +158,7 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
           onBlur={() => setIsFocused(false)}
           className="absolute top-0 left-0 w-full h-full opacity-0 resize-none"
           placeholder={placeholder}
+          rows={rows}
         />
       ) : (
         <input
@@ -156,8 +175,10 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
       )}
 
       <div 
+        ref={displayRef}
         className={`sinhala-display ${!displayText && 'text-gray-400'}`}
         style={displayStyle}
+        onMouseUp={handleMouseUp}
       >
         {displayText || placeholder}
       </div>
