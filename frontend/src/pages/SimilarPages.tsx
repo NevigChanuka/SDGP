@@ -9,8 +9,32 @@ import SinhalaTyping from '../components/SinhalaTyping';
 
 const SimilarWords: React.FC = () => {
 
-    const [text, setText] = useState("");
-    const [paraphrasedText, setParaphrasedText] = useState("");
+    // Create an Axios instance with default settings
+    const api = axios.create({
+        baseURL: "http://127.0.0.1:5000/api", // Change to your backend URL
+        headers: {
+        "Content-Type": "application/json",
+        },
+    });
+
+    // State to store the transliterated Sinhala text
+    const [sinhalaText, setSinhalaText] = useState('');
+
+    // Callback function to handle changes in the SinhalaTyping component
+    const handleChange = async (value: string) => {
+        setSinhalaText(value); // Update state with the transliterated Sinhala text
+
+ // Send the transliterated text to the backend
+        try {
+            const payload = { word: value }; // Send the actual transliterated word
+            const response = await api.post("/synonym-words", payload);
+
+            // Handle response
+            console.log('Backend response:', response.data);
+        } catch (error) {
+            console.error('Error sending data to backend:', error);
+        }
+    };
 
     return (
         <div className='relative w-full flex flex-col'>
@@ -24,12 +48,20 @@ const SimilarWords: React.FC = () => {
                                 <SinhalaTyping
                                     placeholder="මෙතන ලියන්න...."
                                     className="w-[50%] h-50 sm:h-60 lg:h-70 xl:h-80 2xl:h-100 p-2 border-r outline-none resize-none"
+                                    onChange={handleChange}
                                 />
-                                <textarea
+                                {/* <textarea
                                     className="p-2 outline-none resize-none"
-                                    value={paraphrasedText}
+                                    
                                     readOnly
-                                />
+                                /> */}
+                                {/* Display the transliterated Sinhala text */}
+                                <div className="mt-4 p-2 border rounded-lg bg-gray-100">
+                                <h3 className="font-semibold">Output:</h3>
+                                <p>{sinhalaText}</p>
+
+
+                                </div>
                             </div>
                         </div>
                     </div>
