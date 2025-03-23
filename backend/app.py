@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import re
-
+from flask_cors import CORS
 
 
 def load_data(filename):
@@ -45,14 +45,14 @@ def word_prepro(word):
     return cleared_sentences
 
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
 
-@app.route('/synonym-words', methods=['POST'])
+@app.route('/api/synonym-words', methods=['POST'])
 def synonyms_finder():
     try:
 
@@ -60,6 +60,7 @@ def synonyms_finder():
 
         # Get word from frontend
         data = request.get_json()
+        print(data)
         word = data.get("word", "").strip()
 
         # word preprocess
@@ -117,7 +118,7 @@ def paired_words_finder():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-@app.route('/get-parquet-data', methods=['GET'])
+@app.route('/api/get-parquet-data', methods=['GET'])
 def get_parquet_data():
     try:
         filename_list = ['synonym_data.parquet', 'antonyms_data.parquet', 'couplets_data.parquet']
@@ -131,6 +132,30 @@ def get_parquet_data():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+# @app.route('/api/sys', methods=['POST'])
+# def synonyms_finder():
+#     try:
+#
+#         file_name = 'synonym_data.parquet'
+#
+#         # Get word from frontend
+#         data = request.get_json()
+#         print(data)
+#         word = data.get("word", "").strip()
+#
+#         # word preprocess
+#         cleared_word = word_prepro(word)[0]
+#
+#         # find the word
+#         res = word_finder(cleared_word, file_name)
+#
+#         # Return to frontend
+#         return jsonify({"response": res.tolist()})
+#
+#     except Exception as e:
+#         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run()
