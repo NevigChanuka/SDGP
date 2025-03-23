@@ -12,7 +12,7 @@ const GrammarCheckerPage: React.FC = () => {
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
     const handleTextChange = (value: string) => {
-        
+        setText(value);
     };
 
     const handlePasteText = () => {
@@ -68,8 +68,7 @@ const GrammarCheckerPage: React.FC = () => {
                                 <SinhalaTyping 
                                     placeholder='මෙතන ලියන්න....'
                                     onChange={handleTextChange}
-                                    className='border-2 rounded-lg p-3 w-full resize-none bg-white md:h-70 xl:h-80 2xl:h-100'
-                                    height='350px'
+                                    className='border-2 rounded-lg p-3 w-full resize-none bg-white md:h-70 xl:h-90 2xl:h-100'
                                 />  
                                 {!text && (
                                     <div className='absolute inset-0 flex mt-15 justify-center flex-col sm:flex-row gap-1 md:gap-20 xl:gap-50 pointer-events-none'>
