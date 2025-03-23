@@ -81,15 +81,15 @@ const NavBar: React.FC = () => {
                       ref={divRef}
                       className="flex flex-col justify-evenly left-50 top-11 mt-4 p-3 h-30 w-65 border-1 shadow-lg  bg-white absolute"
                     >
-                      <span className="hover:text-emerald-700 hover:font-semibold">jHdlrk Wmfoia </span>
-                      <span className="hover:text-emerald-700 hover:font-semibold">jpk iuQyh </span>
+                      <span className="hover:text-emerald-700 hover:font-semibold" onClick={() =>navigate('/')}>jHdlrk Wmfoia </span>
+                      <span className="hover:text-emerald-700 hover:font-semibold" onClick={() =>navigate('/words-set')}>jpk iuQyh </span>
                     </div>
                   )}
               </li>
 
               <li>
                 <button className="" onClick={() => toggleVisibility("link4")}>
-                  <span className="font-semibold border-emerald-700  hover:border-b-3 p-1">woyia yd fhdackd</span>
+                  <span className="font-semibold border-emerald-700  hover:border-b-3 p-1" onClick={() =>navigate('/feedback')}>woyia yd fhdackd</span>
                 </button>
               </li>
 
