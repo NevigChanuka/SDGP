@@ -122,7 +122,6 @@ const SimilarWords: React.FC = () => {
                     <div className="flex justify-center items-center mt-25">
                         <div className="flex border-2 rounded-lg p-4 w-[65%] bg-white shadow-lg">
                             <div className="w-[50%] relative">
-                                <div className="font-semibold mb-2 text-center">Write Text</div>
                                 {EnhancedSinhalaTyping()}
                             </div>
                             
