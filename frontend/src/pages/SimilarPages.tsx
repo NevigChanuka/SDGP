@@ -19,6 +19,7 @@ const SimilarWords: React.FC = () => {
 
     // State to store the transliterated Sinhala text
     const [responseData, setResponseData] = useState<any>(null);
+    
 
     // Callback function to handle changes in the SinhalaTyping component
     const handleChange = async (value: string) => {
@@ -44,29 +45,26 @@ const SimilarWords: React.FC = () => {
                 <Left_Sidebar/>
                 <div className='items-center size-full'>
                     <div className="flex justify-center items-center mt-25">
-                        <div className="border-2 rounded-lg p-4 w-[65%] bg-white shadow-lg">
-                            <div>
-                                <SinhalaTyping
-                                    placeholder="මෙතන ලියන්න...."
-                                    className="w-[50%] h-50 sm:h-60 lg:h-70 xl:h-80 2xl:h-100 p-2 border-r outline-none resize-none"
-                                    onChange={handleChange}
-                                />
-                                {/* <textarea
-                                    className="p-2 outline-none resize-none"
-                                    
-                                    readOnly
-                                /> */}
-
-
-                                {responseData && (
-                                    <div className=" mt-4 p-2 border rounded-lg bg-gray-100">
-                                        <h3 className="font-semibold">Response Data:</h3>
-                                        <pre>{JSON.stringify(responseData, null, 2)}</pre>
-                                    </div>)}
-
-
-                                
-                            </div>
+                        <div className="flex border-2 rounded-lg p-4 w-[65%] bg-white shadow-lg">
+                            <SinhalaTyping
+                                placeholder="මෙතන ලියන්න...."
+                                className="w-[50%] h-50 sm:h-60 lg:h-70 xl:h-80 2xl:h-100 p-2 border-r outline-none resize-none"
+                                onChange={handleChange}
+                            />
+                            <div className='w-[50%] text-center'>
+                            {responseData && responseData.response && (
+                                <div className="mt-4 p-4">
+                                    <h3 className="font-semibold mb-3">සමාන පද</h3>
+                                    <div className="bg-white p-3 rounded-md">
+                                        {responseData.response.map((word: string, index: number) => (
+                                            <div key={index} className="py-1 text-lg">
+                                                {word}
+                                            </div>
+                                        ))}
+                                    </div>
+                                 </div>
+                            )}  
+                            </div>      
                         </div>
                     </div>
                 </div>
