@@ -5,6 +5,7 @@ import Right_Sidebar from '../components/R_Sidebar.tsx';
 
 
 const GrammarCheckerPage: React.FC = () => {
+
     
     return (
         <div className='relative w-full flex flex-col'>
