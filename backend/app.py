@@ -133,6 +133,9 @@ def get_parquet_data():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/grammar-rules/<filename>')
+def serve_image(filename):
+    return send_from_directory('grammar_rules', filename)
 
 # @app.route('/api/sys', methods=['POST'])
 # def synonyms_finder():
