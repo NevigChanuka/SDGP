@@ -137,28 +137,7 @@ def get_parquet_data():
 def serve_image(filename):
     return send_from_directory('grammar_rules', filename)
 
-# @app.route('/api/sys', methods=['POST'])
-# def synonyms_finder():
-#     try:
-#
-#         file_name = 'synonym_data.parquet'
-#
-#         # Get word from frontend
-#         data = request.get_json()
-#         print(data)
-#         word = data.get("word", "").strip()
-#
-#         # word preprocess
-#         cleared_word = word_prepro(word)[0]
-#
-#         # find the word
-#         res = word_finder(cleared_word, file_name)
-#
-#         # Return to frontend
-#         return jsonify({"response": res.tolist()})
-#
-#     except Exception as e:
-#         return jsonify({'error': str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run()
