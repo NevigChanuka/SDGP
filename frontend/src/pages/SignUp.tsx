@@ -2,10 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Logo } from "../components/Logo";
+import  Logo  from "../assets/logobru.png";
 import GoogleIcon from "../assets/Google.png";
 import FacebookIcon from "../assets/Facebook.png";
 import AppleIcon from "../assets/Apple.png";
+import { useNavigate } from "react-router-dom";
 
 // Validation schema
 const schema = yup.object().shape({
@@ -21,7 +22,9 @@ const SignUp: React.FC = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
-
+  
+  const navigate = useNavigate();
+  
   const onSubmit = (data: any) => {
     localStorage.setItem("registeredEmail", data.email); // Store email in localStorage
     localStorage.setItem("registeredPassword", data.password); // Store password in localStorage
@@ -30,8 +33,10 @@ const SignUp: React.FC = () => {
 
   return (
     <div className="w-[30%] h-[680px] mx-auto mt-12 bg-white p-10 rounded-2xl shadow-2xl border border-green-900">
-      <Logo />
-      <h2 className="text-center text-lg font-medium mt-2 font-sinhasithumina">.sKqula ;kkak</h2>
+          <div className="w-full flex flex-col items-center cusrsor-pointer">
+            <img className="w-40" src={Logo} alt="Vyakarana logo" onClick={() =>navigate('/')} />
+            <h2 className="text-center text-lg font-medium mt-2 font-sinhasithumina">.sKqula ;kkak</h2>
+          </div>  
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center w-full p-4">
         <div className="flex flex-col items-center w-full max-w-sm">
@@ -88,7 +93,7 @@ const SignUp: React.FC = () => {
       {/* Sign In Link */}
       <p className="mt-2 text-xs sm:text-sm text-center font-CCWelikala">
         oekgu;a .sKqula ;sfío@
-        <a href="/SignIn" className="text-green-900 hover:underline">mqrkak</a>
+        <a className="text-green-900 hover:underline" onClick={() => navigate('/sign-in')}>mqrkak</a>
       </p>
     </div>
   );
