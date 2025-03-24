@@ -24,80 +24,24 @@ const NavBar: React.FC = () => {
     };
   }, []);
 
-  // Toggle dropdown
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-  
-  
 
   return (
     <nav className="backdrop-blur-xs backdrop-grayscale border-b-1 p-3  sticky top-0 z-1">
       <div className="flex justify-between items-center">
-        <div className="ml-5 w-25 h-10  cursor-pointer">
+        <div className="absolute ml-5 w-25 h-10  cursor-pointer z-10">
           <img className="" src={image} alt="Vyakarana logo" onClick={() =>navigate('/')} />
         </div>
 
         {/* Navigation Links  */}
-        <div className="relative">
-          <div className="font-sinhasithumina text-zinc-950 text-5xl">
+        <div className="relative  w-full">
+          <div className="font-sinhasithumina text-zinc-950 text-5xl text-center">
             <h2> isxy, jHdlrK mÍlaIl</h2>
           </div>
         </div>
 
         
-        <div className="relative" ref={dropdownRef}>
-            <button 
-                className="flex items-center focus:outline-none"
-                onClick={toggleDropdown}
-            >
-                <img 
-                    src="https://i.pravatar.cc/150?img=32" 
-                    alt="Profile" 
-                    className="w-10 h-10 rounded-full object-cover border-2 border-gray-200"
-                />
-            </button>
+        <div className="relative">
 
-      
-            {isOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg overflow-hidden z-10">
-                    <div className="px-4 py-3 text-center border-b border-gray-100">
-                        <p className="text-sm font-medium text-gray-800">####</p>
-                        <p className="text-xs text-gray-500">####</p>
-                    </div>
-
-                    <ul className="py-1">
-                        <li>
-                            <a 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala"
-                            >
-                                WmlrK mqjrej
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala" onClick={() => navigate('/sign-in')}
-                            >
-                                mqrkak
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala" onClick={() => navigate('/sign-up')}
-                            >
-                                ,shdmÈxÑ jkak
-                            </a>
-                        </li>
-                        <li className="border-t border-gray-100">
-                            <a 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala"
-                            >
-                                jrkak
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            )}
             </div>
         </div>
     </nav>
