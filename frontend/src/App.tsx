@@ -5,6 +5,7 @@ import GrammarCheckerPage from "./pages/GrammerChecker.tsx";
 import Feedback from "./pages/Feedback.tsx";
 import SimilarWords from "./pages/SimilarPages.tsx";
 import WordsSet from "./pages/WordsSet.tsx";
+import Rules from "./pages/RulesPage.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/similar-words" element={<SimilarWords />} />
           <Route path="/words-set" element={<WordsSet />} />
+          <Route path="/rules" element={<Rules />} />
         </Routes>
       </Router>     
     </div>
