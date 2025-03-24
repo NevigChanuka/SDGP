@@ -21,7 +21,7 @@ const L_Sidebar:React.FC = () => {
                 <img className='flex max-w-full h-9 mt-2  ' src={Paraphrase_img} alt="Paraphrase_picture"/>
                 <p className='text-[12px] mb-2 mt-2'>jpk iuQyh</p>
             </button>
-            <button className='flex flex-col w-22 h-22 border-3 items-center justify-center rounded-lg p-1 cursor-pointer font-CCWelikala border-[#0d8065] hover:bg-[#0d8065] hover:text-white hover:scale-110  transition duration-400'onClick={() => navigate('/')}>
+            <button className='flex flex-col w-22 h-22 border-3 items-center justify-center rounded-lg p-1 cursor-pointer font-CCWelikala border-[#0d8065] hover:bg-[#0d8065] hover:text-white hover:scale-110  transition duration-400'onClick={() => navigate('/rules')}>
                 <img className='flex max-w-full h-9 mt-2  ' src={Rules_img} alt="Rules_picture"/>
                 <p className='text-[12px] mb-2 mt-2'>jHdlrK kS;s</p>
             </button>
