@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 import "animate.css";
 import { useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
@@ -14,6 +15,8 @@ import { teamMembers } from "../components/Team.tsx";
 
 
 const Home: React.FC = () => {
+
+    const navigate = useNavigate();
 
   const divRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -84,7 +87,7 @@ const Home: React.FC = () => {
             Ndú;fhka ,sùfuys ;;a;ajh Wiia lr .kak" Tnf.a isxy, oekqu Tmakxjd
             .kak"
           </p>
-          <div className="flex justify-center items-center m-10 absolute w-65 h-14 rounded-full   border-4 border-[#0d8065] hover:scale-110 transition duration-400 hover:bg-[#0d8065] hover:text-white">
+          <div className="flex justify-center items-center m-10 absolute w-65 h-14 rounded-full cursor-pointer  border-4 border-[#0d8065] hover:scale-110 transition duration-400 hover:bg-[#0d8065] hover:text-white" onClick={() => navigate('/grammar-checker')}>
             <span className="font-sandaru text-2xl ">wou Ndú;d lrkak</span>
             <ArrowRight className="w-8 h-7 ml-1" />
           </div>

@@ -62,41 +62,37 @@ const NavBar: React.FC = () => {
             {isOpen && (
                 <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg overflow-hidden z-10">
                     <div className="px-4 py-3 text-center border-b border-gray-100">
-                        <p className="text-sm font-medium text-gray-800">Bonnie Green</p>
-                        <p className="text-xs text-gray-500">name@flowbite.com</p>
+                        <p className="text-sm font-medium text-gray-800">####</p>
+                        <p className="text-xs text-gray-500">####</p>
                     </div>
 
                     <ul className="py-1">
                         <li>
                             <a 
-                                href="#" 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala"
                             >
-                                Dashboard
+                                WmlrK mqjrej
                             </a>
                         </li>
                         <li>
                             <a 
-                                href="#" 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala" onClick={() => navigate('/sign-in')}
                             >
-                                Settings
+                                mqrkak
                             </a>
                         </li>
                         <li>
                             <a 
-                                href="#" 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala" onClick={() => navigate('/sign-up')}
                             >
-                                Earnings
+                                ,shdmÈxÑ jkak
                             </a>
                         </li>
                         <li className="border-t border-gray-100">
                             <a 
-                                href="#" 
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-CCWelikala"
                             >
-                                Sign out
+                                jrkak
                             </a>
                         </li>
                     </ul>

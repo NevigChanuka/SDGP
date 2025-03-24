@@ -1,7 +1,11 @@
 import {CheckCircle} from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const AboutSection = () => {
+
+const navigate = useNavigate();
+    
 return (
  <div className="py-12 px-6 md:px-16 text-justify">
     <div className="max-w-3xl mx-auto">
@@ -21,7 +25,7 @@ return (
         </ul>
         <p className="font-CCWelikala text-xl mt-2"> ,nd .ekSug yelshdj ,efí' </p>
 
-        <div className="flex justify-center items-center m-10 absolute w-65 h-12 rounded-full   border-4 border-[#0d8065] hover:scale-110 transition duration-400 hover:bg-[#0d8065] hover:text-white">
+        <div className="flex justify-center items-center m-10 absolute w-65 h-12 rounded-full cursor-pointer  border-4 border-[#0d8065] hover:scale-110 transition duration-400 hover:bg-[#0d8065] hover:text-white"  onClick={() => navigate('/grammar-checker')}>
             <span className="font-sandaru text-2xl ">Ndú;d lr n,kak</span>
             <ArrowRight className="w-8 h-7 ml-1"/>
         </div>
