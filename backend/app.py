@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import pandas as pd
 import re
 from flask_cors import CORS
-
+from grammar_checker import check_grammar  # Import the grammar checker function
 
 def load_data(filename):
     df = pd.read_parquet(filename, engine='pyarrow')  # Load Parquet file
@@ -137,6 +137,24 @@ def get_parquet_data():
 def serve_image(filename):
     return send_from_directory('grammar_rules', filename)
 
+
+
+@app.route('/api/check-grammar', methods=['POST'])
+def grammar_check():
+    try:
+        # Get sentence from frontend
+        data = request.get_json()
+        sentence = data.get("sentence", "").strip()
+
+        print(sentence)
+
+        # Check grammar
+        corrected_sentence = check_grammar(sentence)
+
+        # Return corrected sentence
+        return jsonify({"corrected_sentence": corrected_sentence})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
