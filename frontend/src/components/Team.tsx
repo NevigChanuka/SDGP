@@ -34,7 +34,7 @@ export interface TeamMember {
     },
     {
       id: '2',
-      name: 'ÈkQld úrdð',
+      name: 'Èkqld úrdð',
       role: 'Full-Stack Developer | UI/UX Designer',
       description: 'Led the Flutter project, gathering and motivating the team to deliver high-quality results. Designed and implemented the mobile app\'s driver dashboard and driving history features, ensuring a seamless user experience.',
       image: Dinuka,
