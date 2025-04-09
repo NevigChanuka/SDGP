@@ -50,7 +50,7 @@ const SinhalaTyping = forwardRef<HTMLTextAreaElement | HTMLInputElement, Sinhala
       let foundMatch = false;
 
       // Try to match the longest possible chunk (3 characters, then 2, then 1)
-      for (let len = 3; len > 0; len--) {
+      for (let len = 4; len > 0; len--) {
         if (i + len <= word.length) {
           const chunk = word.substring(i, i + len);
 
