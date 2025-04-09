@@ -65,7 +65,7 @@ function Footer() {
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <h2 className="mb-4 font-bold text-[35px] tracking-tight font-sandaru">iïnkaO ù isákak</h2>
+            <h2 className="mb-4 font-bold text-3xl tracking-tight font-sandaru">iïnkaO ù isákak</h2>
             <p className="mb-6 text-muted-foreground font-CCWelikala">
               kj;u hdj;ald,Sk lsÍï iy iqúfYaIS §ukd i|yd wmf.a mqj;a m;%sldjg iïnkaO jkak'
             </p>        
@@ -101,7 +101,7 @@ function Footer() {
             </address>
           </div>
           <div className="relative">
-            <h3 className="mb-4 text-2xl font-semibold font-sandaru">wmsj wkq.ukh lrkak</h3>
+            <h3 className="mb-4 text-2xl font-semibold font-sandaru">wm iuÕ iïnkaO jkak</h3>
             <div className="mb-6 flex space-x-4">
               <Button variant="outline" size="icon" className="rounded-full cursor-pointer" onClick={() => window.location.href="https://www.facebook.com/profile.php?id=61573618317072"}>
                 <Facebook className="h-4 w-4" />

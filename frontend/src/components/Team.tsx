@@ -24,7 +24,7 @@ export interface TeamMember {
       id: '1',
       name: 'fkú.a pdkql',
       role: 'Team Lead | Full-Stack Developer',
-      description: 'Led the Project, ensuring seamless coordination and technical execution. Contributed to the both frontend and backend. Managed project workflows, audited team contributions, and guided the team toward creating an innovative vehicle management solution.',
+      description: 'Led the Vyakarana project, ensuring smooth coordination and timely delivery. Contributed to both frontend and backend development, managed workflows, and guided the team in creating an innovative Sinhala grammar tool.',
       image: Nevig,
       socialLinks: {
         instagram: '#',
@@ -35,8 +35,8 @@ export interface TeamMember {
     {
       id: '2',
       name: 'Èkqld úrdð',
-      role: 'Full-Stack Developer | UI/UX Designer',
-      description: 'Led the Flutter project, gathering and motivating the team to deliver high-quality results. Designed and implemented the mobile app\'s driver dashboard and driving history features, ensuring a seamless user experience.',
+      role: 'Full-Stack Developer | Language Researcher',
+      description: 'Contributed to frontend styling and UI components, integrated the backend with the frontend, and researched and collected Sinhala grammar rules.',
       image: Dinuka,
       socialLinks: {
         instagram: 'https://www.instagram.com/dinu_viraji._/',
@@ -47,8 +47,8 @@ export interface TeamMember {
     {
       id: '3',
       name: 'bukaÈ lú;aud',
-      role: 'Full-Stack Developer | UI/UX Expert',
-      description: 'Manage the project, ensuring seamless collaboration and high-quality execution. Designed the UI/UX, developed the backend, and implemented the mobile application.',
+      role: 'UI/UX Designer | Documentation',
+      description: "Contributed to the frontend development and created the wireframe prototype of the project. Also conducted detailed research to support the project's documentation and design decisions.",
       image: Imandi,
       socialLinks: {
         instagram: 'https://www.instagram.com/ima.kik/',
@@ -59,8 +59,8 @@ export interface TeamMember {
     {
       id: '4',
       name: ' iqmqks YIsl,d',
-      role: 'Frontend Developer | Presenter',
-      description: 'Led the presenting and pitching of the project. Developed the frontend interface with a focus on user experience and visual appeal.',
+      role: 'Frontend Developer | Content Manager',
+      description: "Developed the Grammar Checker and Feedback pages of the website. Also created and managed the project's social media pages to support outreach and engagement.",
       image: Supuni,
       socialLinks: {
         instagram: 'https://www.instagram.com/supuni__s?igsh=MXUxM253ZnFwY21waQ==',
@@ -71,8 +71,8 @@ export interface TeamMember {
     {
       id: '5',
       name: 'l<K lreKdr;ak',
-      role: 'Frontend Developer | UI/UX Designer',
-      description: 'Developed the frontend interface with a focus on responsive and visually appealing user experiences. Contributed to UI/UX design and mobile app development.',
+      role: 'Full-Stack Developer | UI/UX Designer',
+      description: 'Developed the frontend by designing and building the Similar Words, Grammar Rules, and Word Bank pages. Helped improve the platform’s educational value and user experience through clear, accessible layouts and features.',
       image: Kalana,
       socialLinks: {
         instagram: 'https://www.instagram.com/kalana_1061?igsh=MWc5b2hoMDVodGlvdg==',
@@ -83,8 +83,8 @@ export interface TeamMember {
     {
       id: '6',
       name: 'wl,xl úyx.k',
-      role: 'Full-Stack Developer | Documentation',
-      description: 'Led documentation efforts and conducted in-depth research to enhance system performance and reliability. Contributed to both frontend and backend development.',
+      role: 'Language Data Collector',
+      description: 'Collected synonyms, antonyms, and paired words for the Word Bank feature, contributing to the educational content and enhancing the tool’s language support capabilities.',
       image: Akalanka,
       socialLinks: {
         instagram: 'https://www.instagram.com/_akalanka_wihangana?igsh=YmJuZTFrNnprYjl3&utm_source=qr',
