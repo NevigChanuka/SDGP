@@ -193,7 +193,7 @@ const Home: React.FC = () => {
     <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-5xl font-sinhasithumina">wmf.a lKavdhu yuqjkak</h2>
+          <h3 className="text-3xl font-bold text-gray-900  font-sandaru">wmf.a lKavdhu yuqjkak</h3>
           <p className="mt-4 text-lg text-gray-500 font-CCWelikala">
             úYsIag;ajh ,nd §u i|yd tlaj lghq;= lrk lemjQ jD;a;slhka
           </p>

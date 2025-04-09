@@ -19,7 +19,7 @@ export function TeamCard({ member }: TeamCardProps) {
       />
       
       {/* Team member's name */}
-      <h3 className="text-3xl font-bold text-gray-900 font-sandaru">{member.name}</h3>
+      <h3 className="text-2xl font-bold text-gray-900 font-sandaru">{member.name}</h3>
       
       {/* Team member's role */}
       <p className="text-sm text-gray-600 mb-4 font-bold">{member.role}</p>
