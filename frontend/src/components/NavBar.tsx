@@ -98,7 +98,7 @@ const NavBar: React.FC = () => {
         </div>
 
         <div>
-          <button className="font-CCWelikala border-4 border-emerald-700 w-30 h-10 rounded-full hover:bg-emerald-700 hover:text-white hover:scale-110  transition duration-400" onClick={() =>navigate('/grammar-checker')}>
+          <button className="font-CCWelikala border-4 border-emerald-700 w-30 h-10 rounded-full hover:bg-emerald-700 hover:text-white hover:scale-110  transition duration-400" onClick={() =>navigate('/sign-in')}>
             <span>msúfikak</span>
           </button>
         </div>

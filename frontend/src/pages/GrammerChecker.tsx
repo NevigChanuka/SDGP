@@ -16,6 +16,7 @@ const GrammarCheckerPage: React.FC = () => {
 
   // Handler for text change (currently empty, can be implemented as needed)
   const handleTextChange = (value: string) => {
+    setText(value); // Update the text state with the new value
     // This function can be used to handle text changes in the SinhalaTyping component
   };
 
@@ -89,6 +90,7 @@ const GrammarCheckerPage: React.FC = () => {
                 <SinhalaTyping
                   placeholder='මෙතන ලියන්න....' // Placeholder text
                   onChange={handleTextChange} // Handler for text changes
+                  onSelect={handleTextChange} // Handler for text selection
                   className='border-2 rounded-lg p-3 w-full resize-none bg-white md:h-70 xl:h-90 2xl:h-100' // Styling
                 />
                 {/* Buttons for paste and upload (visible only when text is empty) */}
