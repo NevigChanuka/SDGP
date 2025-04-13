@@ -23,8 +23,8 @@ export interface TeamMember {
     {
       id: '1',
       name: 'fkú.a pdkql',
-      role: 'Team Lead | Full-Stack Developer',
-      description: 'Led the Vyakarana project, ensuring smooth coordination and timely delivery. Contributed to both frontend and backend development, managed workflows, and guided the team in creating an innovative Sinhala grammar tool.',
+      role: 'lKavdhï kdhl" mQ¾K ixj¾Ol',
+      description: "'—jHdlrK— jHdmD;sh m%uqLj kv;a;= lrñka lKavdhu w;r iqyo iïnkaO;d iy fõ,djg ld¾hhka bgq ùu iqrlaIs; lf<ñ' bÈßmi yd miqmi ixj¾Ok l%shdj,shka folgu iDcqj odhlfjñka jev m%jdy l<ukdlrKh lf<ñ' kùk isxy, jHdlrK fuj,ula ks¾udKh lsÍu i|yd lKavdhug u. fmkaùu isÿ lf<ñ'",
       image: Nevig,
       socialLinks: {
         instagram: '#',
@@ -35,8 +35,8 @@ export interface TeamMember {
     {
       id: '2',
       name: 'Èkqld úrdð',
-      role: 'Full-Stack Developer | Language Researcher',
-      description: 'Contributed to frontend styling and UI components, integrated the backend with the frontend, and researched and collected Sinhala grammar rules.',
+      role: 'mQ¾K ixj¾Ol" NdId m¾fhaIl',
+      description: "mßYS,l w;=reuqyqK;a ixrpl ieliSu i|yd odhl;ajh ,nd ÿksñ' miqmi iy bÈßmi wx. tAldnoaO lsÍu isÿ lf<ñ' ;jo isxy, jHdlrK kS;s m¾fhaIKh lr tla/ia lsÍfï ld¾hNdrho bgq lf<ñ'",
       image: Dinuka,
       socialLinks: {
         instagram: 'https://www.instagram.com/dinu_viraji._/',

@@ -22,10 +22,10 @@ export function TeamCard({ member }: TeamCardProps) {
       <h3 className="text-2xl font-bold text-gray-900 font-sandaru">{member.name}</h3>
       
       {/* Team member's role */}
-      <p className="text-sm text-gray-600 mb-4 font-bold">{member.role}</p>
+      <p className="text-xl text-gray-700 mb-4 font-bold font-sandaru">{member.role}</p>
       
       {/* Team member's description */}
-      <p className="text-sm text-gray-500 mb-6 ">{member.description}</p>
+      <p className="text-sm text-gray-500 mb-6 font-sandaru">{member.description}</p>
       
       {/* Social media links container */}
       <div className="flex gap-4">
