@@ -23,8 +23,8 @@ export interface TeamMember {
     {
       id: '1',
       name: 'fkú.a pdkql',
-      role: 'Team Lead | Full-Stack Developer',
-      description: 'Led the Vyakarana project, ensuring smooth coordination and timely delivery. Contributed to both frontend and backend development, managed workflows, and guided the team in creating an innovative Sinhala grammar tool.',
+      role: 'lKavdhï kdhl" mQ¾K ixj¾Ol',
+      description: "jHdlrK jHdmD;sh kv;a;= lrñka lKavdhu w;r iqyo iïnkaO;d iy ld¾hhka fõ,djg bgq ùu iqrlaIs; lf<ñ' bÈßmi yd miqmi ixj¾Ok l%shdj,shkays iDcqj odhlj ld¾h m%jdy l<ukdlrKh iy isxy, jHdlrK fuj,ula ks¾udKh lsÍu i|yd u. fmkaùu lf<ñ'",
       image: Nevig,
       socialLinks: {
         instagram: '#',
@@ -35,8 +35,8 @@ export interface TeamMember {
     {
       id: '2',
       name: 'Èkqld úrdð',
-      role: 'Full-Stack Developer | Language Researcher',
-      description: 'Contributed to frontend styling and UI components, integrated the backend with the frontend, and researched and collected Sinhala grammar rules.',
+      role: 'mQ¾K ixj¾Ol" NdId m¾fhaIl',
+      description: "mßYS,l w;=reuqyqK;a ixrpl ieliSu i|yd odhl;ajh ,nd ÿksñ' miqmi iy bÈßmi wx. tAldnoaO lsÍu isÿ lf<ñ' ;jo isxy, jHdlrK kS;s m¾fhaIKh lr tla/ia lsÍfï ld¾hNdrho bgq lf<ñ'",
       image: Dinuka,
       socialLinks: {
         instagram: 'https://www.instagram.com/dinu_viraji._/',
@@ -47,8 +47,8 @@ export interface TeamMember {
     {
       id: '3',
       name: 'bukaÈ lú;aud',
-      role: 'UI/UX Designer | Documentation',
-      description: "Contributed to the frontend development and created the wireframe prototype of the project. Also conducted detailed research to support the project's documentation and design decisions.",
+      role: 'w;=reuqyqK;a ks¾udml" jHdmD;s f,aLl',
+      description: "jHdmD;sfha bÈßmi ixj¾Okhg odhl;ajh ,nd ÿksñ'  jHdmD;sfha msgq i|yd uQ,sl fmkqu ilia lsÍug odhl jqfKñ' ;jo jHdmD;s f,aLkh i|yd úia;rd;aul m¾fhaIKhla isÿ lf<ñ'",
       image: Imandi,
       socialLinks: {
         instagram: 'https://www.instagram.com/ima.kik/',
@@ -59,8 +59,8 @@ export interface TeamMember {
     {
       id: '4',
       name: ' iqmqks YIsl,d',
-      role: 'Frontend Developer | Content Manager',
-      description: "Developed the Grammar Checker and Feedback pages of the website. Also created and managed the project's social media pages to support outreach and engagement.",
+      role: 'bÈßmi ixj¾Ol" iudc udOH l,ukdlrKh',
+      description: "jHdmD;sfha bÈßmi ixj¾Okhg odhl;ajh ,ndfoñka  jHdlrK mÍlaIl iy m%;spdr msgq ixj¾Okh lf<ñ' jHdmD;sfha iudc udOH msgq ks¾udKh iy l<ukdlrKh lr m%pdrl yd iïnkaO;d jevms<sfj<g iyh ÿkafkñ'",
       image: Supuni,
       socialLinks: {
         instagram: 'https://www.instagram.com/supuni__s?igsh=MXUxM253ZnFwY21waQ==',
@@ -71,8 +71,8 @@ export interface TeamMember {
     {
       id: '5',
       name: 'l<K lreKdr;ak',
-      role: 'Full-Stack Developer | UI/UX Designer',
-      description: 'Developed the frontend by designing and building the Similar Words, Grammar Rules, and Word Bank pages. Helped improve the platform’s educational value and user experience through clear, accessible layouts and features.',
+      role: 'mQ¾K ixj¾Ol" w;=reuqyqK;a ks¾udml',
+      description: "bÈßmi ixj¾Okh lsÍfï§ iudk mo jHdlrK Í;s iy mo iuQyh msgq ks¾udKh iy f.dvke.Su isÿ lf<ñ' meyeÈ,s yd m%fõYuh úfYaIdx. yryd jHdmD;sfha wOHdmksl jákdlu iy mßYS,l w;aoelSu jeä ÈhqKq lsÍug iyh ÿkafkñ'",
       image: Kalana,
       socialLinks: {
         instagram: 'https://www.instagram.com/kalana_1061?igsh=MWc5b2hoMDVodGlvdg==',
@@ -83,8 +83,8 @@ export interface TeamMember {
     {
       id: '6',
       name: 'wl,xl úyx.k',
-      role: 'Language Data Collector',
-      description: 'Collected synonyms, antonyms, and paired words for the Word Bank feature, contributing to the educational content and enhancing the tool’s language support capabilities.',
+      role: 'NdId o;a; iïmdol',
+      description: 'isxy, NdIdj wOHhkh lrñka mo iuQyh úfYaIdx.h i|yd iudk mo" úreoaO mo iy hq., mo tl;= lsÍu isÿ lrñka" wOHdmksl wka;¾.;hg odhl ù fuj,fï NdId iyh j¾Okh lsÍug Woõ lf<ñ',
       image: Akalanka,
       socialLinks: {
         instagram: 'https://www.instagram.com/_akalanka_wihangana?igsh=YmJuZTFrNnprYjl3&utm_source=qr',
